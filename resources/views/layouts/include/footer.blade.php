@@ -4,17 +4,17 @@
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
                     <h3 class="widget-title">About Us</h3>
-                    <img loading="lazy" class="footer-logo" src="{{asset('assets/images/logo.jpg')}}" alt="Constra">
+                    <img loading="lazy" class="footer-logo" src="{{asset('assets/images/logo.jpg')}}" width="100" height="90" alt="gsaconsulting">
                     <p style="color: black;">Being one of the fast-growing consulting firms, GSA Consulting team
                         has wide experience in serving the business community, </p>
                     <div class="footer-social">
                         <ul>
-                            <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"
+                            <li><a href="https://www.linkedin.com/in/gsa-consulting-4b5b45270" aria-label="linkedin"><i class="fab fa-linkedin"
                                         style="color: #144591;"></i></a></li>
-                            <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"
+                            <li><a href="https://twitter.com/GSAConsultingTz" aria-label="Twitter"><i class="fab fa-twitter"
                                         style="color: #144591;"></i></a>
                             </li>
-                            <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"
+                            <li><a href="https://www.instagram.com/gsaconsultingtz/" aria-label="Instagram"><i class="fab fa-instagram"
                                         style="color: #144591;"></i></a></li>
 
                         </ul>
@@ -30,9 +30,9 @@
                         <br><br> Monday - Friday: <span class="text-right">08:00 - 16:00 </span>
                         <br> Saturday: <span class="text-right">10:00 - 15:00</span>
                         <br> <i class="fa fa-envelope" aria-hidden="true" style="color: #144591;"></i> :
-                        info@gsaafrica.com <span class="text-right"></span>
-                        <br> <i class="fa fa-phone-square" aria-hidden="true" style="color: #144591;"></i> : +255
-                        1234 73822 24 <span class="text-right"></span>
+                        info@gsaconsultact.co.tz <span class="text-right"></span>
+                        <br> <i class="fa fa-phone-square" aria-hidden="true" style="color: #144591;"></i> : 
+                        +255 782 515 655 <span class="text-right"></span>
 
                     </div>
                 </div><!-- Col end -->

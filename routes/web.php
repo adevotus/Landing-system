@@ -57,6 +57,7 @@ Route::get('/advisory',[SiteController::class,'advisory'])->name('advisory');
 Route::get('/auditor',[SiteController::class,'auditor'])->name('auditor');
 Route::get('/blogs', [SiteController::class, 'blogSite'])->name('blogSite');
 Route::get('/blogs/{id}',[SiteController::class,'singleBlog'])->name('singleBlog');
+Route::get('/careers',[SiteController::class,'careers'])->name('careers');
 
 Route::get('/site/managemet', [SiteController::class, 'siteManagement'])->name('site_management');
 Auth::routes();
@@ -107,6 +108,7 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
 
     //feedback
     Route::get('/feedback', [FeedbackController::class, 'feedback'])->name('feedback');
+    Route::delete('/feedback/{id}',[FeedbackController::class,'destory'])->name('feedback_delete');
 });
 
 

@@ -65,8 +65,6 @@ class SiteController extends Controller
         ]);
     }
 
-
-
     public function contact()
     {
         $feedbacks = Feedback::get();
@@ -140,6 +138,10 @@ class SiteController extends Controller
         return  view('sites.pages.accounting');
     }
    
+    public function careers(){
+
+        return view('sites.pages.careers');
+    }
 
     /**
      * Store a newly created resource in storage.

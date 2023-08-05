@@ -8,7 +8,7 @@
 
         <div class="banner-carousel banner-carousel-2 mb-0">
             <div class="banner-carousel-item"
-                style="background-image:url({{ asset('assets/images/items/item_7.jpeg') }});position:relative; background-repeat: no-repeat;">
+                style="background-image:url({{ asset('assets/images/bg_1_edited.png') }});position:relative; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="box-slider-content">
                         <div class="box-slider-text" style="background-color: #144591; opacity:0.9">
@@ -37,7 +37,7 @@
                                 <p class="box-slide-description">We believe in providing good consulting in Taxes
                                     ,Auditing and Advisory.</p>
                                 <p>
-                                    <a href="service_gsa.html" class="slider btn bg-white text-dark"
+                                    <a href="{{route('services')}}" class="slider btn bg-white text-dark"
                                         style="color: #144591">Our Service</a>
                                 </p>
                             </div>
@@ -59,7 +59,7 @@
                         <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
                             <div class="call-to-action-btn">
                                 <a class="btn btn-primary" style="background-color: #ebebeb; color: #144591;"
-                                    href="contact.html">Contact us</a>
+                                    href="{{route('contact_us')}}">Contact us</a>
                             </div>
                         </div><!-- col end -->
                     </div><!-- row end -->
@@ -84,10 +84,10 @@
                                         </div>
                                         <div class="ts-service-info">
                                             <h3 class="service-box-title" style="color: #144591; font-weight: bold;"><a
-                                                    href="taxes.html">Tax</a></h3>
+                                                    href="{{route('taxes')}}">Tax</a></h3>
                                             <p class="text-justify">Tax advice is very key in every step business set up and
                                                 operation. We manage tax risks for our clients</p>
-                                            <a class="learn-more d-inline-block" href="taxes.html"
+                                            <a class="learn-more d-inline-block" href="{{route('taxes')}}"
                                                 aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
                                         </div>
                                     </div>
@@ -110,10 +110,10 @@
                                         <!--                    <img loading="lazy" src="images/icon-image/survey.png" height="70" width="60" alt="service-icon" style="font-size: 10px"/>-->
                                     </div>
                                     <div class="ts-service-info">
-                                        <h3 class="service-box-title"><a href="audit.html">Audit & Assurance</a></h3>
+                                        <h3 class="service-box-title"><a href="{{route('auditor')}}">Audit & Assurance</a></h3>
                                         <p class="text-justify">We offer specialized audit services in procurement,
                                             investigations and forensic audits</p>
-                                        <a class="learn-more d-inline-block" href="audit.html"
+                                        <a class="learn-more d-inline-block" href="{{route('auditor')}}"
                                             aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
                                     </div>
                                 </div>
@@ -135,10 +135,10 @@
                                         <!--                    <img loading="lazy" src="images/icon-image/discussion.png" width="60" height="70" alt="service-icon" />-->
                                     </div>
                                     <div class="ts-service-info">
-                                        <h3 class="service-box-title"><a href="advisory.html">Advisory</a></h3>
+                                        <h3 class="service-box-title"><a href="{{route('advisory')}}">Advisory</a></h3>
                                         <p class="text-justify">We provide businesses with corporate finance advice and
                                             support across a range of issues.</p>
-                                        <a class="learn-more d-inline-block" href="advisory.html"
+                                        <a class="learn-more d-inline-block" href="{{route('advisory')}}"
                                             aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                             clients in managing their tax risks and reduce their tax exposure.</p>
                         <div class="call-to-action-btn">
                             <a class="btn btn-primary" style="background-color: #ebebeb; color: #144591;"
-                                href="about.html">About us <i class="fa fa-arrow-right ml-3"
+                                href="{{route('about_us')}}">About us <i class="fa fa-arrow-right ml-3"
                                     aria-hidden="true"></i></a>
                         </div>
 
@@ -178,7 +178,7 @@
                         <div id="page-slider" class="page-slider small-bg">
 
                             <div class="item"
-                                style="background-image:url({{ asset('assets/images/slider-pages/slider_4.jpg') }})">
+                                style="background-image:url({{ asset('assets/images/items/item_2.jpeg') }})">
                                 <div class="container">
                                     <div class="box-slider-content">
                                         <div class="box-slider-text">
@@ -189,7 +189,7 @@
                             </div><!-- Item 1 end -->
 
                             <div class="item"
-                                style="background-image:url({{ asset('assets/images/slider-pages/slider_5.png') }})">
+                                style="background-image:url({{ asset('assets/images/items/item_6.jpeg') }})">
                                 <div class="container">
                                     <div class="box-slider-content">
                                         <div class="box-slider-text">
@@ -277,8 +277,7 @@
                                             style="background-color: #144591; opacity: 0.7;">
                                             <h3 class="text-center text-white">Performance</h3>
 
-                                            <p class="text-justify text-white">Lorem ipsfacere possimus cum vel ea
-                                                explicabo. Expedita modi earum recusandae aliquam! Quo, laborum!</p>
+                                            <p class="text-justify text-white">We emphasize on meeting the unique needs of our clients on a one-to-one basis. To us, every client is special and we lay down a special approach to meeting their needs.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -301,7 +300,7 @@
         <div class="container">
             <div class="facts-wrapper">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 ts-facts">
+                    <div class="col-md-3 col-sm-6 ts-facts">
                         <div class="ts-facts-img">
                             <i class="fa fa-home" aria-hidden="true" style="color: #fff; font-size: 45px;"></i>
                             <!-- <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img"> -->
@@ -312,7 +311,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 ts-facts mt-5 mt-sm-0">
+                    <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
                         <div class="ts-facts-img">
                             <i class="fa fa-book" aria-hidden="true" style="color: #fff; font-size: 45px;"></i>
                             <!-- <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img"> -->
@@ -323,7 +322,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 ts-facts mt-5 mt-md-0">
+                    <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
                         <div class="ts-facts-img">
                             <i class="fa fa-comments" aria-hidden="true" style="color: #fff; font-size: 45px;"></i>
                             <!-- <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img"> -->
@@ -331,6 +330,16 @@
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num"><span class="counterUp" data-count="{{$totalFeedback}}">0</span></h2>
                             <h3 class="ts-facts-title" style="color: #fff;">Reviews</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+                        <div class="ts-facts-img">
+                            <i class="fa fa-eye" aria-hidden="true" style="color: #fff; font-size: 45px;"></i>
+                            <!-- <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img"> -->
+                        </div>
+                        <div class="ts-facts-content">
+                            <h2 class="ts-facts-num"><span class="counterUp" data-count="{{$totalFeedback}}">0</span></h2>
+                            <h3 class="ts-facts-title" style="color: #fff;">visitors</h3>
                         </div>
                     </div>
 

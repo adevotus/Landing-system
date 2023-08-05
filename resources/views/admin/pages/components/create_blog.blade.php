@@ -70,7 +70,7 @@
                                             <div class="form-group row mb-4">
                                                 <div class="col-md-4"></div>
                                                 <div class="col-sm-12 col-md-4">
-                                                    <button type="submit" class="btn btn-primary btn-block">Register Staff</button>
+                                                    <button type="submit" class="btn btn-primary btn-block">Publish Post</button>
                                                 </div>
                                             </div>
                                         </form>

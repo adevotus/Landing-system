@@ -83,7 +83,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('publiSite')}}" class="nav-link">carees </a>
+                                    <a href="{{route('careers')}}" class="nav-link">careers </a>
 
                                 </li>
 

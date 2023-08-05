@@ -68,6 +68,110 @@
             </div>
 
           </div>
+          <div class="row">
+            <div class="col-md-12 mt-5 mt-md-0">
+                <h3 class="column-title-small" style="color: #144591;">Our Key Services include</h3>
+
+                <div class="accordion accordion-group accordion-classic"
+                    id="construction-accordion">
+                    <div class="card">
+                        <div class="card-header p-0 bg-transparent" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-block text-left" type="button"
+                                    data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne"
+                                    style="text-transform:lowercase;">
+                                    CFO Outsourcing Services </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#construction-accordion">
+                            <div class="card-body">
+                                <p class="text-justify">Our Outsourced COF Services offer support that will ensure the improvement of the accounting 
+                                  efficiencies, the refinery tax strategies, and conquest of the financial challenges in order to keep 
+                                  moving forward. We will help your business to implement strong accounting and tax practices 
+                                  that will streamline your finances and improve business performance.
+                                  </p>
+
+
+                                <p class="text-justify">We support our clients in managing their tax
+                                    risks and reduce their tax exposure. The practice
+                                    is made up of tax and legal professionals and has experience of
+                                    providing various tax services.
+                                    These include tax planning and advisory, tax compliance and
+                                    transfer pricing. We also provide
+                                    tax training as well as helping businesses to set up in
+                                    Tanzania.</p>
+                                <ul class="list-arrow">
+                                    <li> Interim CFO or Controller</li>
+                                    <li> Part-time CFO services
+                                    </li>
+                                    <li> Business improvement strategies
+                                    </li>
+                                    <li> Strategic business planning
+                                      .</li>
+                                    <li> Financial analysis and reporting
+                                    </li>
+                                    <li> Cash flow management</li>
+                                    <li> Tax planning to maximize profits</li>
+                                    <li> Training for in-house accountants and bookkeepers
+                                    </li>
+                                    <li>Risk management
+                                    </li>
+                                    <li>Due diligence</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-0 bg-transparent" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo"
+                                    style="text-transform: lowercase;">
+                                    Information and technology management Services
+                                  </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#construction-accordion">
+                            <div class="card-body">
+                                <p class="text-justify">
+                                  Organizations that manipulate and use IT as a part of their long-term thinking are achieving, maintaining 
+                                  competitive advantage in this global marketplace. Computer is just one component of an IS and it along 
+                                  with other related technologies has allowed us to obtain or collect data, process data, and deliver 
+                                  information (reports) more rapidly and reliably. We live in an era of constant change and, therefore, 
+                                  must prepare ourselves to cope with it.
+                                </p>
+                                <h4 style="text-transform: lowercase;"> GSA Consulting provides following general software solutions for its clients including;
+                                </h4>
+                              <ul class="list-arrow">
+                                  <li>IT Audit</li>
+                                  <li>Preparation of user requirement specifications and feasibility studies</li>
+                                  <li>Defining computer hardware and software requirements</li>
+                                  <li>Business process redesign and reengineering</li>
+                                  <li>Systems analysis, evaluation and design</li>
+                                  <li>Information systems strategies</li>
+                                  <li>Computerization of accounting departments</li>
+                                  <li>Preparation of the ‘Statement of Emoluments and</li>
+                                  <li>Training in the use of computers, accounting packages and other techniques</li>
+
+
+                              
+                            </div>
+                        </div>
+                    </div>
+                 
+
+
+                </div>
+                <!--/ Accordion end -->
+            </div>
+        </div>
+        
           <!--2nd row end -->
 
           <div class="gap-40"></div>

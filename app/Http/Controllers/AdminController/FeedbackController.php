@@ -18,8 +18,10 @@ class FeedbackController extends Controller
     public function feedback()
     {
         $feedbacks = Feedback::get();
+        $feedback = Feedback::get();
         return view('admin.pages.feedback',[
-            'feedbacks'=>$feedbacks
+            'feedbacks'=>$feedbacks,
+            'feedback'=>$feedback
         ]);
     }
 
@@ -68,7 +70,9 @@ class FeedbackController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $feedback = Feedback::get();
+        return view('admin.pages.feedback', compact('feedback'));
     }
 
     /**
@@ -91,6 +95,16 @@ class FeedbackController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $feedback = Feedback::find($id);
+        if (!$feedback) {
+            return back()->with('error', 'blog record not found.');
+            // return redirect()->route('/hr/staff')->with('error', 'Staff record not found.');
+        }
+
+        $feedback->delete();
+        $feedback = Feedback::get();
+        return view('admin.pages.feedback', [
+            'feedback' => $feedback,
+        ])->with('success', 'client record deleted successfully.');
     }
 }

@@ -72,8 +72,9 @@
                             </span>
                             <div class="ts-service-box-content">
                                 <h4>Call Us</h4>
-                                <p>(+255) 847-291-4353</p>
-                                <p>(+255) 847-291-4353</p>
+                                <p> +255 782 515 655</p>
+                                <p>P.O. Box 2680
+                                </p>
 
                             </div>
                         </div>

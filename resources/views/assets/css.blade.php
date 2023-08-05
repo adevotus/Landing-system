@@ -5,8 +5,7 @@
 
 
     <meta charset="utf-8">
-    <title>GSA Africa</title>
-
+    <title>GSA Consulting</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"
@@ -15,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 
-    <link rel="icon" type="image/png" href="{{asset('asset/images/favicon_image.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('asset/images/favicon.jpg')}}">
 
 
     <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/bootstrap.min.css') }}">
