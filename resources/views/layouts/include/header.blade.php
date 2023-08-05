@@ -43,8 +43,8 @@
 
                         <div class="logo">
                             <a class="d-block" href="index.html">
-                                <img loading="lazy" src="{{ asset('assets/images/gsa_logo.png') }}"
-                                    width="500" style="width: 250px; height: 70px;" alt="gsa">
+                                <img loading="lazy" src="{{ asset('assets/images/logo.jpg') }}"
+                                    width="500" style="width: 250px; height: 100px;" alt="gsa">
                             </a>
                         </div><!-- logo end -->
 
@@ -72,10 +72,7 @@
                                     <a href="{{route('services')}}" class="nav-link">Services </a>
 
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Training </a>
-
-                                </li>
+                               
 
                                 <li class="nav-item">
                                     <a href="{{route('blogSite')}}" class="nav-link">Blogs </a>
@@ -83,6 +80,10 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('publiSite')}}" class="nav-link">Publications </a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('publiSite')}}" class="nav-link">carees </a>
 
                                 </li>
 

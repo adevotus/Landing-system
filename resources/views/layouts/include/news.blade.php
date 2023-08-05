@@ -149,7 +149,7 @@
                         </div>
                         <div class="post-body">
                             <h4 class="post-title">
-                                <a href="{{ url('blogs/' . $blog->id) }}"
+                                <a href="{{ url('blogs/' . $blog->slug) }}"
                                     class="d-inline-block">{{ $blog->blogTitle }}</a>
                             </h4>
                             <div class="latest-post-meta">
@@ -161,7 +161,7 @@
 
                             </div>
                             <div class="text-center">
-                                <a class="btn btn-primary text-center " href="{{ url('blogs/' . $blog->id) }}"
+                                <a class="btn btn-primary text-center " href="{{ url('blogs/' . $blog->slug) }}"
                                     style="background-color: #144591; text-align:center;">
                                     Read more 
                                 </a>

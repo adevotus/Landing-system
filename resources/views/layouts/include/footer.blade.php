@@ -4,7 +4,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
                     <h3 class="widget-title">About Us</h3>
-                    <img loading="lazy" class="footer-logo" src="{{asset('assets/images/gsa_logo.png')}}" alt="Constra">
+                    <img loading="lazy" class="footer-logo" src="{{asset('assets/images/logo.jpg')}}" alt="Constra">
                     <p style="color: black;">Being one of the fast-growing consulting firms, GSA Consulting team
                         has wide experience in serving the business community, </p>
                     <div class="footer-social">

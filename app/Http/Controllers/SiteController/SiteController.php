@@ -50,10 +50,10 @@ class SiteController extends Controller
             'blogs' => $blogs
         ]);
     }
-    public function singleBlog($id)
+    public function singleBlog($slug)
     {
-        $latest = Blog::latest('id')->get();
-        $blog = Blog::find($id);
+        $latest = Blog::latest('slug')->get();
+        $blog = Blog::find($slug);
         $blogs = Blog::get();
 
 
@@ -136,6 +136,9 @@ class SiteController extends Controller
         return view('sites.pages.auditor');
     }
 
+    public function accounting(){
+        return  view('sites.pages.accounting');
+    }
    
 
     /**

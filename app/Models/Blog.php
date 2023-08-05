@@ -13,7 +13,8 @@ class Blog extends Model
         'publDate',
         'blogImage',
         'initalDescr',
-        'moreDescr'
+        'moreDescr',
+        'slug'
       
     ];
 }

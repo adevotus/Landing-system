@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Str;
 
 
 class BlogController extends Controller
@@ -19,8 +20,10 @@ class BlogController extends Controller
     public function blog()
     {
         $blogs = Blog::get();
+        $blog= Blog::get();
         return view('admin.pages.blog', [
             'blogs' => $blogs,
+            'blog'=> $blog
 
         ]);
     }
@@ -29,10 +32,10 @@ class BlogController extends Controller
         return view('admin.pages.components.create_blog');
     }
 
-    public function IndividualBlog($id){
+    public function IndividualBlog($slug){
 
-        $latest = Blog::latest('id')->get();
-        $blog = Blog::find($id);
+        $latest = Blog::latest('slug')->get();
+        $blog = Blog::find($slug);
         $blogs = Blog::get();
         return view('admin.pages.components.IndividualBlog',[
             'blog'=>$blog,
@@ -72,6 +75,7 @@ class BlogController extends Controller
         $validatedData->publDate = $request->input('publDate');
         $validatedData->initalDescr = $request->input('initalDescr');
         $validatedData->moreDescr = $request->input('moreDescr');
+        $validatedData->slug = Str::slug($validatedData->blogTitle);
         if ($request->hasFile('blogImage')) {
             $blogImage = $request->file('blogImage');
             $blogImageName = time() . '.' . $blogImage->getClientOriginalExtension();
@@ -82,8 +86,6 @@ class BlogController extends Controller
                 unlink(public_path('images/' . $validatedData->blogImage));
             }
         }
-
-
         if ($validatedData->save()) {
             $blogs = Blog::get();
             return view('admin.pages.blog', [
@@ -135,6 +137,8 @@ class BlogController extends Controller
         $validatedData->publDate = $request->input('publDate');
         $validatedData->initalDescr = $request->input('initalDescr');
         $validatedData->moreDescr = $request->input('moreDescr');
+        $validatedData->slug = Str::slug($validatedData->blogTitle);
+
         if ($request->hasFile('blogImage')) {
             $blogImage = $request->file('blogImage');
             $blogImageName = time() . '.' . $blogImage->getClientOriginalExtension();

@@ -8,7 +8,7 @@
 
         <div class="banner-carousel banner-carousel-2 mb-0">
             <div class="banner-carousel-item"
-                style="background-image:url({{ asset('assets/images/slider-pages/slider_2.jpg') }})">
+                style="background-image:url({{ asset('assets/images/items/item_7.jpeg') }});position:relative; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="box-slider-content">
                         <div class="box-slider-text" style="background-color: #144591; opacity:0.9">
@@ -270,7 +270,7 @@
                         <div id="page-slider" class="page-slider small-bg" style="margin-bottom: 20px;">
                             <!-- workplace-team-cooperation-businesswoman-laptop-office.jpg -->
                             <div class="item"
-                                style="background-image:url({{ asset('assets/images/slider-pages/workplace-team-cooperation-businesswoman-laptop-office.jpg') }})">
+                                style="background-image:url({{ asset('assets/images/items/item_4.jpeg') }})">
                                 <div class="container">
                                     <div class="">
                                         <div class="text-center mt-4 p-5"
