@@ -10,7 +10,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Staff</h1>
+                        <h1>Parent Registered</h1>
                         <div class="section-header-breadcrumb">
 
                         </div>
@@ -22,7 +22,7 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <span><a href="{{ route('create_staff') }}"><h4 class="btn btn-primary">create staff</h4></a> </span>
+                                        <span><a href="{{ route('create_staff') }}"><h4 class="btn btn-primary">Add parent</h4></a> </span>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -92,7 +92,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('staff_delete', $staffs->id) }}" method="POST">
+                                <form action="{{ route('staff_delete',$staffs->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>

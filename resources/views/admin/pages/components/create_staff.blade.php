@@ -12,7 +12,7 @@
                         <div class="section-header-back">
                             <a href="{{ route('gsa_staffs') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                         </div>
-                        <h1>Register the new Staff</h1>
+                        <h1>Register the new parent</h1>
 
                     </div>
 

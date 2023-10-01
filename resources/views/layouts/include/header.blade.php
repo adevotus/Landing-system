@@ -1,108 +1,17 @@
-<div id="top-bar" class="top-bar">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <ul class="top-info text-center text-md-left">
-                    <li><i class="fas fa-map-marker-alt"></i>
-                        <p class="info-text">Dar-es-salaam , Tanzania </p>
-                    </li>
-                </ul>
-            </div>
-            <!--/ Top info end -->
-
-            <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
-                <ul class="list-unstyled">
-                    <li>
-                        <a title="Facebook" href="https://www.linkedin.com/in/gsa-consulting-4b5b45270">
-                            <span class="social-icon"><i class="fab fa-linkedin"></i></span>
-                        </a>
-                        <a title="Twitter" href="https://twitter.com/GSAConsultingTz">
-                            <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                        </a>
-                        <a title="Instagram" href="https://www.instagram.com/gsaconsultingtz/">
-                            <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-            <!--/ Top social end -->
-        </div>
-        <!--/ Content row end -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+    <div class="container"><a class="navbar-brand" href="index.html"><img class="d-inline-block" src="{{asset('landing/assets/img/icons/logo.png')}}" width="150" alt="logo" /><span class="fw-bold text-primary ms-2"></span></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto pt-2 pt-lg-0 font-base">
+          <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="#destinations"><span class="nav-link-icon text-800 me-1 fas fa-hotel"></span><span class="nav-link-text">Maktaba </span></a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="#booksCover"> <span class="nav-link-icon text-800 me-1 fas fa-book"></span><span class="nav-link-text">books</span></a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="#testimon"> <span class="nav-link-icon text-800 me-1 fas fa-comments"></span><span class="nav-link-text">Testimonial</span></a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="#blog"><span class="nav-link-icon text-800 me-1 fas fa-bolt"></span><span class="nav-link-text">Blog</span></a></li>
+        </ul>
+        <form>
+          <button class="btn text-800 order-1 order-lg-0 me-2" type="button">Support</button>
+          {{-- <button class="btn btn-voyage-outline order-0" type="submit"><span class="text-primary">Sign in</span></button> --}}
+        </form>
+      </div>
     </div>
-    <!--/ Container end -->
-</div>
-
-<header id="header" class="header-two"
-    style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;">
-    <div class="site-navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light p-0">
-
-                        <div class="logo">
-                            <a class="d-block" href="index.html">
-                                <img loading="lazy" src="{{ asset('assets/images/logo.jpg') }}"
-                                    width="500" style="width: 250px; height: 100px;" alt="gsa">
-                            </a>
-                        </div><!-- logo end -->
-
-                        <button class="navbar-toggler" style="color: #144591; background-color: #144591;"
-                            type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                            aria-controls="navbar-collapse" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"
-                                style="color: #144591; background-color: #144591;"></span>
-                        </button>
-
-                        <div id="navbar-collapse" class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav ml-auto align-items-center">
-                                <li class="nav-item active" style="color:#144591">
-                                    <a href="{{route('home')}}" class="nav-link active" style="color:#144591">Home </a>
-
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('about_us')}}" class="nav-link">Abouts </a>
-
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('services')}}" class="nav-link">Services </a>
-
-                                </li>
-                               
-
-                                <li class="nav-item">
-                                    <a href="{{route('blogSite')}}" class="nav-link">Blogs </a>
-
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('publiSite')}}" class="nav-link">Publications </a>
-
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('careers')}}" class="nav-link">careers </a>
-
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{asset('contact_us')}}" class="nav-link">Contact </a>
-
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <!--/ Col end -->
-            </div>
-            <!--/ Row end -->
-        </div>
-        <!--/ Container end -->
-
-    </div>
-    <!--/ Navigation end -->
-</header>
+  </nav>

@@ -10,7 +10,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Publications</h1>
+                        <h1>School Registered</h1>
                         <div class="section-header-breadcrumb">
 
                         </div>
@@ -24,7 +24,7 @@
                                     <div class="card-header">
                                         {{-- <h4>Basic DataTables</h4> --}}
                                         <button class="btn btn-primary" data-toggle="modal"
-                                            data-target="#exampleModal">Post Publcations</button>
+                                            data-target="#exampleModal">Add School.</button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">

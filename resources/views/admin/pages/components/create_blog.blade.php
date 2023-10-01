@@ -12,7 +12,7 @@
                         <div class="section-header-back">
                             <a href="{{ route('blog') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                         </div>
-                        <h1>Create Post for blog</h1>
+                        <h1>Create Post for book</h1>
 
                     </div>
 
@@ -33,7 +33,7 @@
                                             <div class="form-row">
                                                 <div class="col-md-2"></div>
                                                 <div class="form-group col-md-5">
-                                                    <label for="inputEmail4">Blog Title</label>
+                                                    <label for="inputEmail4">Book Title</label>
                                                     <input type="text" class="form-control" id="inputEmail4" name="blogTitle"
                                                         placeholder="your post title">
                                                 </div>
@@ -46,7 +46,7 @@
                                             <div class="form-row">
                                                 <div class="col-md-2"></div>
                                                 <div class="form-group col-md-10">
-                                                    <label for="inputEmail4">Blog Image</label>
+                                                    <label for="inputEmail4">Cover Image</label>
                                                     <input type="file" class="form-control" id="inputEmail4" name="blogImage"
                                                     placeholder="date">
                                                 </div>

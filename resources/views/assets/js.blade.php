@@ -1,12 +1,13 @@
 
 
-<script src="{{asset('assets/plugins/jQuery/jquery.min.js')}}"></script>
- <script src="{{asset('assets/plugins/bootstrap/bootstrap.min.js')}}" defer></script>
- <script src="{{asset('assets/plugins/slick/slick.min.js')}}"></script>
- <script src="{{asset('assets/plugins/slick/slick-animation.min.js')}}"></script>
- <script src="{{asset('assets/plugins/colorbox/jquery.colorbox.js')}}"></script>
- <script src="{{asset('assets/plugins/shuffle/shuffle.min.js')}}" defer></script>
- <script src="{{asset('assets/plugins/google-map/map.js')}}" defer></script>
- <script src="{{asset('assets/js/script.js')}}"></script>
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+ <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="{{asset('landing/vendors/@popperjs/popper.min.js')}}"></script>
+    <script src="{{asset('landing/vendors/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{asset('landing/vendors/is/is.min.js')}}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{{asset('landing/vendors/fontawesome/all.min.js')}}"></script>
+    <script src="{{asset('landing/assets/js/theme.js')}}"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&amp;display=swap" rel="stylesheet">

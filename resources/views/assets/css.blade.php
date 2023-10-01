@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 
-<head>
-
-
+  <head>
     <meta charset="utf-8">
-    <title>GSA Consulting</title>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="GSA Consulting is a professional service firm specialized in accounting,
-          tax and consulting services to companies in diverse sectors in Tanzania. Being one of the fast-growing consulting firms">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="icon" type="image/png" href="{{asset('asset/images/favicon.jpg')}}">
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Maktaba Online Tanzania</title>
 
 
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/animate-css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/colorbox/colorbox.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon_favicon.jpg">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
 
-</head>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="{{asset('landing/assets/css/theme.css')}}" rel="stylesheet" />
+
+  </head>

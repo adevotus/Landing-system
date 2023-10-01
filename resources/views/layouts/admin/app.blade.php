@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Staff</h4>
+                                        <h4>Total School</h4>
                                     </div>
                                     <div class="card-body">
                                         {{ $totalStaffs }}
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Blogs</h4>
+                                        <h4>Parents</h4>
                                     </div>
                                     <div class="card-body">
                                         {{ $totalBlogs }}
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Clients</h4>
+                                        <h4>Reviews</h4>
                                     </div>
                                     <div class="card-body">
                                         {{ $totalClients }}
