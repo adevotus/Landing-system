@@ -29,39 +29,34 @@
                   </div>
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <form class="row g-4 mt-5">
+                      <form class="row g-4 mt-5" method = "post" action = "" >
+                        
+                        @csrf
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
-                            <label class="form-label visually-hidden" for="inputAddress1">First Name</label>
-                            <input class="form-control input-box form-voyage-control" id="inputAddress1" type="text" placeholder="First Name" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"></i></span>
+                            <label class="form-label visually-hidden" for="inputAddress1">Name</label>
+                            <input class="form-control input-box form-voyage-control" id="inputAddress1" type="text" name = "name" placeholder="Your Name" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"></i></span>
                           </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
-                            <label class="form-label visually-hidden" for="inputAddress2">Second Name</label>
-                            <input class="form-control input-box form-voyage-control" id="inputAddress2" type="text" placeholder="Second name" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"> </i></span>
+                            <input class="form-control input-box form-voyage-control" id="inputDateTwo" type="email"  name = "email" placeholder="your email"/><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-envelope"></i></span>
                           </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputdateOne" type="number" placeholder="Your Contact" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-phone"></i></span>
+                            <input class="form-control input-box form-voyage-control" id="inputdateOne" type="number" name="contact" placeholder="Your Contact" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-phone"></i></span>
                           </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputDateTwo" type="email"  placeholder="your email"/><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-envelope"></i></span>
+                            <label class="form-label visually-hidden" for="inputAddress2">Region</label>
+                            <input class="form-control input-box form-voyage-control" id="inputAddress2" type="text" name = "region" placeholder="Your Region" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"> </i></span>
                           </div>
                         </div>
-                        <!-- <div class="col-sm-6 col-md-6 col-xl-5">
-                          <div class="input-group-icon">
-                            <label class="form-label visually-hidden" for="inputPersonOne">Organisation</label>
-                            <select class="form-select form-voyage-select input-box" id="inputPersonOne">
-                              <option selected="selected">Schools</option>
-                              <option>NG'O</option>
-                              <option>PRIVATE</option>
-                            </select><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-hotel"> </i></span>
-                          </div>
-                        </div> -->
+                        
+                       
+      
                         <div class="col-12 col-xl-10 col-lg-12 d-grid mt-6">
                           <button class="btn btn-secondary" type="submit">Submit </button>
                         </div>
@@ -72,18 +67,23 @@
                         <div class="col-6">
                           <div class="input-group-icon">
                             <label class="form-label visually-hidden" for="inputAddressThree">School Name</label>
-                            <input class="form-control input-box form-voyage-control" id="inputAddressThree" type="text" placeholder="school name" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-graduation-cap"></i></span>
+                            <input class="form-control input-box form-voyage-control" id="inputAddressThree"  name = "name" type="text" placeholder="school name" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-graduation-cap"></i></span>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="input-group-icon">
-                            <label class="form-label visually-hidden" for="inputAddressFour">Address 2</label>
-                            <input class="form-control input-box form-voyage-control" id="inputAddressFour" type="text" placeholder="Location" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-map-marker-alt"> </i></span>
+                            <label class="form-label visually-hidden" for="inputAddressFour">School Region</label>
+                            <input class="form-control input-box form-voyage-control" id="inputAddressFour" type="text"  name = "region" placeholder="Region" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-map-marker-alt"> </i></span>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputDateThree" type="numbe" placeholder="School Reg Number" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
+                            <input class="form-control input-box form-voyage-control" id="inputDateThree" type="numbe"  name=  "phone number" placeholder="phone number" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="input-group-icon">
+                            <input class="form-control input-box form-voyage-control" id="inputDateThree" type="email" name ="email" placeholder="School Email" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-envelope"></i></span>
                           </div>
                         </div>
                         <!-- <div class="col-6">
