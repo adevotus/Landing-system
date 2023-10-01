@@ -29,8 +29,7 @@
                   </div>
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <form class="row g-4 mt-5" method = "post" action = "" >
-                        
+                      <form class="row g-4 mt-5" method = "post" action = "{{route('parentRegistration')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
@@ -63,7 +62,8 @@
                       </form>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <form class="row g-4 mt-5">
+                      <form class="row g-4 mt-5" method = "post" action="{{route('schoolRegistration'}}" enctype="multipart/form-data" >
+                        @csrf
                         <div class="col-6">
                           <div class="input-group-icon">
                             <label class="form-label visually-hidden" for="inputAddressThree">School Name</label>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="col-6">
                           <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputDateThree" type="numbe"  name=  "phone number" placeholder="phone number" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
+                            <input class="form-control input-box form-voyage-control" id="inputDateThree" type="numbe"  name=  "phoneNumber" placeholder="phone number" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
                           </div>
                         </div>
                         <div class="col-6">

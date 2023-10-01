@@ -44,14 +44,9 @@ Route::get('/about_us', [SiteController::class, 'about'])->name('about_us');
 Route::get('/contact_us', [SiteController::class, 'contact'])->name('contact_us');
 Route::post('/contact_us', [SiteController::class, 'SendMessage'])->name('sendMessage');
 Route::get('/publiSite',[SiteController::class,'publiSite'])->name('publiSite');
-Route::get('/accounting_service',[SiteController::class,'accounting'])->name('accounting');
-Route::get('/services', [SiteController::class, 'service'])->name('services');
-Route::get('/taxes',[SiteController::class,'taxes'])->name('taxes');
-Route::get('/advisory',[SiteController::class,'advisory'])->name('advisory');
-Route::get('/auditor',[SiteController::class,'auditor'])->name('auditor');
+
 Route::get('/blogs', [SiteController::class, 'blogSite'])->name('blogSite');
 Route::get('/blogs/{id}',[SiteController::class,'singleBlog'])->name('singleBlog');
-Route::get('/careers',[SiteController::class,'careers'])->name('careers');
 
 Route::get('/site/managemet', [SiteController::class, 'siteManagement'])->name('site_management');
 Auth::routes();

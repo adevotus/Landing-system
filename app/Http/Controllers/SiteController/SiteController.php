@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Feedback;
 use App\Models\Publication;
+use App\Models\Gudian;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -94,6 +95,47 @@ class SiteController extends Controller
 
 
 
+    public function ParentRegistration(Request $request){
+         //dd($request->all());
+         $validatedData = new Gudian();
+         $validatedData->name = $request->input('name');
+         $validatedData->region = $request->input('region');
+         $validatedData->contact = $request->input('contact');
+         $validatedData->email = $request->input('email');
+ 
+         if ($validatedData->save()) {
+             $parents = Gudian::get();
+             return view('sites.home', [
+                 'parents' => $parents,
+ 
+             ]);
+         }
+ 
+         return back()->with('error', 'Failed to save  staff.');
+       
+    }
+
+
+    public function SchoolRegistration(Request $request){
+        //dd($request->all());
+        $validatedData = new School();
+        $validatedData->name = $request->input('name');
+        $validatedData->region = $request->input('region');
+        $validatedData->contact = $request->input('phoneNumber');
+        $validatedData->email = $request->input('email');
+
+        if ($validatedData->save()) {
+            $schools = School::get();
+            return view('sites.home', [
+                'schools' => $schools,
+
+            ]);
+        }
+
+        return back()->with('error', 'Failed to save  staff.');
+      
+   }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -109,7 +151,7 @@ class SiteController extends Controller
         if ($validatedData->save()) {
             $feedbacks = Feedback::get();
 
-            return view('sites.pages.contact', [
+            return view('sites.home', [
                 'feedbacks' => $feedbacks,
 
             ]);
@@ -119,29 +161,7 @@ class SiteController extends Controller
         return redirect()->back();
     }
 
-    public function taxes()
-    {
-        return view('sites.pages.taxes');
-    }
 
-    public function advisory()
-    {
-        return view('sites.pages.advisory');
-    }
-
-    public function auditor()
-    {
-        return view('sites.pages.auditor');
-    }
-
-    public function accounting(){
-        return  view('sites.pages.accounting');
-    }
-   
-    public function careers(){
-
-        return view('sites.pages.careers');
-    }
 
     /**
      * Store a newly created resource in storage.
