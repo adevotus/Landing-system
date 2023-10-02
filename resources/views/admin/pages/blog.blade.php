@@ -22,8 +22,7 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        {{-- <h4>Basic DataTables</h4> --}}
-                                        <span><a href="{{ route('create_blog') }}"><h4 class="btn btn-primary">create blog</h4></a> </span>
+                                        <span><a href="{{ route('create_book') }}"><h4 class="btn btn-primary">create book</h4></a> </span>
 
                                     </div>
                                     <div class="card-body">
@@ -34,32 +33,32 @@
                                                         <th class="text-center">
                                                             #
                                                         </th>
-                                                        <th>Blog Title</th>
-                                                        <th>Publish Date</th>
+                                                        <th>Title</th>
+                                                        <th> Date</th>
                                                         <th>Image</th>
                                                         <th>Initia Desctiption</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($blogs as $blog )
+                                                    @foreach ($books as $book )
                                                     <tr>
                                                         <td>
-                                                            {{$blog->id}}
+                                                            {{$book->id}}
                                                         </td>
-                                                        <td>{{$blog->blogTitle}}</td>
+                                                        <td>{{$book->title}}</td>
                                                         <td class="align-middle">
-                                                            {{$blog->publDate}}
+                                                            {{$book->date}}
                                                         </td>
                                                         <td>
-                                                            <img alt="image" src="{{asset('public/images/'.$blog->blogImage)}}"
+                                                            <img alt="image" src="{{asset('public/images/'.$book->Covermage)}}"
                                                                 class="rounded-circle" width="35"
                                                                 data-toggle="tooltip" title="Wildan Ahdian">
                                                         </td>
-                                                        <td>{{$blog->initalDescr}}</td>
+                                                        <td>{{$book->initalDescr}}</td>
                                                        
                                                         <td>
-                                                            <form action="{{ route('IndividualBlog', $blog->id) }}" method="POST">
+                                                            <form action="{{ route('IndividualBlog', $book->id) }}" method="POST">
                                                                 @method('PUT')
                                                                 @csrf
                                                                 <button type="submit" class="btn btn-primary btn-action mr-1" data-toggle="tooltip">
@@ -67,7 +66,7 @@
                                                                 </button>
                                                             </form>
                                                          
-                                                            <a class="btn btn-danger btn-action" data-toggle="modal" data-target="#confirmDeleteModal{{$blog->id}}">
+                                                            <a class="btn btn-danger btn-action" data-toggle="modal" data-target="#confirmDeleteModal{{$book->id}}">
                                                                 <i class="fas fa-trash"></i>
                                                             </a>
                                                           </td>
@@ -86,11 +85,11 @@
                 </section>
 
 
-                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{$blog->id}}">
+                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{$book->id}}">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="confirmDeleteModal{{$blog->id}}Label">Confirm Delete</h5>
+                                <h5 class="modal-title" id="confirmDeleteModal{{$book->id}}Label">Confirm Delete</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -101,7 +100,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('blog_delete', $blog->id) }}" method="POST">
+                                <form action="{{ route('book_delete', $book->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>

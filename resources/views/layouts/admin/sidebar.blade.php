@@ -14,11 +14,11 @@
             </li>
             <li class="menu-header">App</li>
             <li class="dropdown">
-                <a href="{{ route('gsa_staffs') }}" class="nav-link"> <i class="far fa-user"></i> <span>Parents</span></a>
+                <a href="{{ route('parent') }}" class="nav-link"> <i class="far fa-user"></i> <span>Parents</span></a>
 
             </li>
             <li class="dropdown">
-                <a href="{{ route('publications') }}" class="nav-link"><i
+                <a href="{{ route('schools') }}" class="nav-link"><i
                         class="fas fa-columns"></i><span>Schools</span></a>
 
             </li>
@@ -26,9 +26,9 @@
                 <a href="{{route('feedback')}}" class="nav-link"><i class="fas fa-th-large"></i> <span>Reviews</span></a>
 
             </li>
-            <li><a class="nav-link" href="{{route('blog')}}"><i class="fas fa-exclamation"></i> <span>Books</span></a></li>
+            <li><a class="nav-link" href="{{route('book')}}"><i class="fas fa-exclamation"></i> <span>Books</span></a></li>
             <li class="dropdown">
-                <a href="{{ route('publications') }}" class="nav-link"><i
+                <a href="{{ route('schools') }}" class="nav-link"><i
                         class="fas fa-columns"></i><span>Reviews</span></a>
 
             </li>
@@ -44,10 +44,5 @@
 
 
 
-            {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-                <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                    <i class="fas fa-rocket"></i> Documentation
-                </a>
-            </div> --}}
     </aside>
 </div>

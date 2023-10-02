@@ -29,5 +29,26 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="{{asset('landing/assets/css/theme.css')}}" rel="stylesheet" />
+    <style>
+      /* CSS for the play button overlay */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  opacity: 0; /* Hide the play button by default */
+  transition: opacity 0.3s;
+}
+
+/* Show the play button on hover */
+.card:hover .play-button {
+  opacity: 1;
+}
+
+    </style>
 
   </head>

@@ -29,7 +29,7 @@
                   </div>
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <form class="row g-4 mt-5" action="{{route('parentRegistration')}}"  method = "post" enctype="multipart/form-data">
+                      <form class="row g-4 mt-5" action="#"  method = "post" enctype="multipart/form-data">
                         @csrf
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
@@ -62,7 +62,7 @@
                       </form>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <form class="row g-4 mt-5" action="{{route('schoolRegistration')}}"  method = "post" enctype="multipart/form-data" >
+                      <form class="row g-4 mt-5" action="#"  method = "post" enctype="multipart/form-data" >
                         @csrf
                         <div class="col-6">
                           <div class="input-group-icon">
@@ -531,14 +531,23 @@
             <div class="col-sm-6 col-lg-4">
               <div class="row g-2">
                 <div class="col-12">
-                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_6.jpg')}}" height="375" alt="..." />
-                    <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                      <div class="mt-auto px-4 mb-1">
-                        <h3 class="fs-1 fs-md-2 text-white">Munich</h3><span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span><span class="text-light me-3">10 Packages</span>
+                      <div class="card card-span h-100 text-white position-relative">
+                        <img class="img-fluid h-100 w-100" src="{{ asset('landing/assets/img/book_6.jpg') }}" height="375" alt="..." />
+                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
+                          <div class="mt-auto px-4 mb-1">
+                            <h3 class="fs-1 fs-md-2 text-white">Munich</h3>
+                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
+                            <span class="text-light me-3">10 Packages</span>
+                          </div>
+                          <a class="stretched-link" href="#!"></a>
+                        </div>
+                        <!-- Add a play button overlay -->
+                        <div class="play-button bg-danger">
+                          <i class="fa fa-play-circle"></i>
+                        </div>
                       </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
                 </div>
+
                 <div class="col-12">
                   <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_3.jpg')}}" height="375" alt="..." />
                     <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
@@ -590,30 +599,17 @@
      
       
       
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-    
-
-
-   
-
     
 
 
       
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
       @include('layouts.include.footer')
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
 
     </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+   
 
 
     @include('assets.js')

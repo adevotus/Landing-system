@@ -4,31 +4,28 @@ namespace App\Http\Controllers\AdminController;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Staff;
+use App\Models\Gudian;
 use Illuminate\Support\Facades\Crypt;
 
-class StaffController extends Controller
+class   ParentController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+  
 
-    public function staff()
+    public function parent()
     {
-        $staffs = Staff::get();
+        $parents = Gudian::get();
         return view('admin.pages.staff', [
-            'staffs' => $staffs,
+            'parents' => $parents,
 
         ]);
     }
 
-    public function create_staffs()
+    public function create_parent()
     {
         return view('admin.pages.components.create_staff');
     }
@@ -54,22 +51,17 @@ class StaffController extends Controller
 
 
         //dd($request->all());
-        $validatedData = new Staff();
-        $validatedData->Fname = $request->input('Fname');
-        $validatedData->Lname = $request->input('Lname');
-        $validatedData->Mname = $request->input('Mname');
-        $validatedData->email = $request->input('email');
-        $validatedData->contact = $request->input('contact');
-        $validatedData->location = $request->input('location');
-        $validatedData->job_title = $request->input('job_title');
-        $validatedData->job_position = $request->input('job_position');
-        $validatedData->description = $request->input('description');
+        $validatedData = new Gudian();
+         $validatedData->name = $request->input('name');
+         $validatedData->region = $request->input('region');
+         $validatedData->contact = $request->input('contact');
+         $validatedData->email = $request->input('email');
 
 
         if ($validatedData->save()) {
-            $staffs = Staff::get();
+            $parents = Gudian::get();
             return view('admin.pages.staff', [
-                'staffs' => $staffs,
+                'parents' => $parents,
 
             ]);
         }
@@ -98,8 +90,8 @@ class StaffController extends Controller
     {
         $encryptedId = Crypt::encryptString($id);
 
-        $staffs = Staff::get();
-        return view('admin.pages.staff', compact('staffs'));
+        $parents = Gudian::get();
+        return view('admin.pages.staff', compact('parents'));
     }
 
 
@@ -113,26 +105,21 @@ class StaffController extends Controller
     public function update(Request $request,$id )
     {
         // $id = Crypt::decryptString($encryptedId);
-        $validatedData = Staff::find($id);
-        $validatedData->Fname = $request->input('Fname');
-        $validatedData->Lname = $request->input('Lname');
-        $validatedData->Mname = $request->input('Mname');
-        $validatedData->email = $request->input('email');
+        $validatedData = Gudian::find($id);
+        $validatedData->name = $request->input('name');
+        $validatedData->region = $request->input('region');
         $validatedData->contact = $request->input('contact');
-        $validatedData->location = $request->input('location');
-        $validatedData->job_title = $request->input('job_title');
-        $validatedData->job_position = $request->input('job_position');
-        $validatedData->description = $request->input('description');
+        $validatedData->email = $request->input('email');
 
         if ($validatedData->save()) {
-            $staffs = Staff::get();
+             $parents = Gudian::get();
             return view('admin.pages.staff', [
-                'staffs' => $staffs,
+                'parents' => $parents,
 
             ]);
         }
 
-        return back()->with('error', 'Failed to update staff record.');
+        return back()->with('error', 'Failed to update  record.');
     }
 
     /**
@@ -143,16 +130,15 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        $staff = Staff::find($id);
-        if (!$staff) {
-            return back()->with('error', 'Staff record not found.');
-            // return redirect()->route('/hr/staff')->with('error', 'Staff record not found.');
+        $parent = Gudian::find($id);
+        if (!$parent) {
+            return back()->with('error', ' record not found.');
         }
 
-        $staff->delete();
-        $staffs = Staff::get();
+        $parent->delete();
+        $parents = Gudian::get();
         return view('admin.pages.staff', [
-            'staffs' => $staffs,
-        ])->with('success', 'Staff record deleted successfully.');
+            'parents' => $parents,
+        ])->with('success', 'record deleted successfully.');
     }
 }

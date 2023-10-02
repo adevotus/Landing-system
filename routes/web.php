@@ -1,27 +1,17 @@
 <?php
 
-use App\Http\Controllers\AdminController\BlogController;
+use App\Http\Controllers\AdminController\BookController;
 use App\Http\Controllers\AdminController\ClientController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
-use App\Http\Controllers\User\AcademicQualificationController;
-use App\Http\Controllers\User\ComputerLiterancyController;
-use App\Http\Controllers\User\LanguageProficiencyController;
-use App\Http\Controllers\User\OnlineCourseController;
-use App\Http\Controllers\User\OtherAttachimentController;
-use App\Http\Controllers\User\PersonalDetailsController;
-use App\Http\Controllers\User\ProfessionalQualificationController;
-use App\Http\Controllers\User\RefereesController;
-use App\Http\Controllers\User\TrainingAndWorkshopController;
-use App\Http\Controllers\User\UserController;
-use App\Http\Controllers\User\WorkingExperienceController;
+
 use App\Http\Controllers\AdminController\DashboardController;
 use App\Http\Controllers\AdminController\FeedbackController;
-use App\Http\Controllers\AdminController\PublicationsController;
-use App\Http\Controllers\AdminController\StaffController as StaffController;
+use App\Http\Controllers\AdminController\SchoolsController;
+use App\Http\Controllers\AdminController\ParentController as ParentController;
 
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\SiteController\SiteController;
@@ -64,21 +54,21 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
     Route::post('/admin_profile/password', [ProfileController::class, 'updatePassword'])->name('update_password');
 
 
-    //staff router
-    Route::get('/parent', [StaffController::class, 'staff'])->name('gsa_staffs');
-    Route::get('/create_parent', [StaffController::class, 'create_staffs'])->name('create_staff');
-    Route::post('/parent', [StaffController::class, 'store'])->name('staff_registration');
-    Route::delete('/parent/{id}', [StaffController::class, 'destroy'])->name('staff_delete');
-    Route::get('/parent/{id}/edit', [StaffController::class, 'edit'])->name('staff_edit');
-    Route::put('/parent/{id}', [StaffController::class, 'update'])->name('staff_update');
+    //parent router
+    Route::get('/parent', [ParentController::class, 'parent'])->name('parent');
+    Route::get('/create_parent', [ParentController::class, 'create_parent'])->name('create_parent');
+    Route::post('/parent', [ParentController::class, 'store'])->name('parent_registration');
+    Route::delete('/parent/{id}', [ParentController::class, 'destroy'])->name('parent_delete');
+    Route::get('/parent/{id}/edit', [ParentController::class, 'edit'])->name('parent_edit');
+    Route::put('/parent/{id}', [ParentController::class, 'update'])->name('parent_update');
 
 
-    //publications
-    Route::get('/schools', [PublicationsController::class, 'publications'])->name('publications');
-    Route::post('/schools', [PublicationsController::class, 'store'])->name('post_publications');
-    Route::delete('/schools/{id}', [PublicationsController::class, 'destory'])->name('publications_delete');
-    Route::get('/schools/{id}/edit', [PublicationsController::class, 'edit'])->name('publications_edit');
-    Route::put('schools/{id}', [PublicationsController::class, 'update'])->name('publications_update');
+    //school router
+    Route::get('/schools', [SchoolsController::class, 'school'])->name('schools');
+    Route::post('/schools', [SchoolsController::class, 'store'])->name('post_school');
+    Route::delete('/schools/{id}', [SchoolsController::class, 'destory'])->name('school_delete');
+    Route::get('/schools/{id}/edit', [SchoolsController::class, 'edit'])->name('school_edit');
+    Route::put('schools/{id}', [SchoolsController::class, 'update'])->name('school_update');
 
     //client
     Route::get('/client', [ClientController::class, 'client'])->name('client');
@@ -89,12 +79,12 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
 
 
     //blog
-    Route::get('/gsaafrica/blog', [BlogController::class, 'blog'])->name('blog');
-    Route::get('/gsaafrrica/create_blog', [BlogController::class, 'create_blog'])->name('create_blog');
-    Route::post('/gsaafrica/blog', [BlogController::class, 'store'])->name('blog_post');
-    Route::delete('/gsaafrica/blog/{id}', [BlogController::class, 'destroy'])->name('blog_delete');
-    Route::put('/gsaafrica/blog_update/{id}', [BlogController::class, 'update'])->name('blog_update');
-    Route::put('/gsaafrica/blog/{id}', [BlogController::class, 'IndividualBlog'])->name('IndividualBlog');
+    Route::get('/book', [BookController::class, 'book'])->name('book');
+    Route::get('/create_book', [BookController::class, 'create_book'])->name('create_book');
+    Route::post('/book', [BookController::class, 'store'])->name('book_post');
+    Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('book_delete');
+    Route::put('/book_update/{id}', [BookController::class, 'update'])->name('book_update');
+    Route::put('/book/{id}', [BookController::class, 'IndividualBlog'])->name('IndividualBlog');
 
 
     //feedback

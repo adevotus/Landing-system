@@ -22,7 +22,7 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <span><a href="{{ route('create_staff') }}"><h4 class="btn btn-primary">Add parent</h4></a> </span>
+                                        <span><a href="{{ route('create_parent') }}"><h4 class="btn btn-primary">Add parent</h4></a> </span>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -32,33 +32,28 @@
                                                         <th class="text-center">
                                                             #
                                                         </th>
-                                                        <th>First Name</th>
-                                                        <th>Middle Name</th>
-                                                        <th>Last Name</th>
+                                                        <th> Name</th>
+=                                                        <th> Region</th>
                                                         <th>Email</th>
                                                         <th>Contact</th>
-                                                        <th>Job title</th>
-                                                        <th>Job position</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($staffs as $staffs)
+                                                    @foreach ($parents as $parents)
                                                     <tr>
                                                         <td>
-                                                          {{$staffs->id}}  
+                                                          {{$parents->id}}  
                                                         </td>
-                                                        <td>{{$staffs->Fname}}</td>
-                                                        <td>{{$staffs->Mname}}</td>
-                                                        <td>{{$staffs->Lname}}</td>
-                                                        <td>{{$staffs->email}}</td>
-                                                        <td>{{$staffs->contact}}</td>
-                                                        <td>{{$staffs->job_title}}</td>
-                                                        <td>{{$staffs->job_position}}</td>
+                                                        <td>{{$parents->name}}</td>
+                                                        <td>{{$parents->region}}</td>
+                                                        <td>{{$parents->email}}</td>
+                                                        <td>{{$parents->contact}}</td>
+                                                        
                                                         <td>
-                                                            <a class="btn btn-primary btn-action mr-1"data-toggle="modal"  data-target="#exampleModal{{$staffs->id}}"><i class="fas fa-pencil-alt"></i></a>
+                                                            <a class="btn btn-primary btn-action mr-1"data-toggle="modal"  data-target="#exampleModal{{$parents->id}}"><i class="fas fa-pencil-alt"></i></a>
 
-                                                            <a class="btn btn-danger btn-action" data-toggle="modal" data-target="#confirmDeleteModal{{$staffs->id}}">
+                                                            <a class="btn btn-danger btn-action" data-toggle="modal" data-target="#confirmDeleteModal{{$parents->id}}">
                                                                 <i class="fas fa-trash"></i>
                                                             </a>
                                                           </td>
@@ -77,22 +72,22 @@
                         </div>
                     </div>
                 </section>
-                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{$staffs->id}}">
+                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{$parents->id}}">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="confirmDeleteModal{{$staffs->id}}Label">Confirm Delete</h5>
+                                <h5 class="modal-title" id="confirmDeleteModal{{$parents->id}}Label">Confirm Delete</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 Are you sure you want to delete this blog? 
-                                <h5>{{$staffs->Fname}}.</h5>
+                                <h5>{{$parents->name}}.</h5>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('staff_delete',$staffs->id) }}" method="POST">
+                                <form action="{{ route('parent_delete',$parents->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -102,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal{{$staffs->id}}">
+                <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal{{$parents->id}}">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -113,7 +108,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="card-body">
-                                    <form action="{{ url('gsa_staffs/'.$staffs->id) }}" method="post" enctype="multipart/form-data">
+                                    <form action="{{ url('parent/'.$parents->id) }}" method="post" enctype="multipart/form-data">
                                         @method('PUT')
                                         @csrf
                                         <div class="form-row">

@@ -22,7 +22,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>{{$blog->blogTitle}}</h4>
+                                        <h4>{{$book->title}}</h4>
                                     </div>
                                     <div class="card-body">
                                         <a href="#"
@@ -33,7 +33,7 @@
                                         <div class="tickets">
                                             <div class="ticket-items" id="ticket-items">
                                                 <div class="ticket-item">
-                                                    <img src="{{ asset('public/images/' . $blog->blogImage) }}"
+                                                    <img src="{{ asset('public/images/' . $book->Covermage) }}"
                                                         alt="image" width="410" height="360">
 
                                                 </div>
@@ -47,16 +47,16 @@
                                                         </div>
                                                         <div class="ticket-info">
                                                             <div class="font-weight-600">{{ Auth::user()->name }}</div> |
-                                                            <div class="text-primary font-weight-600">{{$blog->publDate}}</div>
+                                                            <div class="text-primary font-weight-600">{{$book->date}}</div>
                                                         </div>
                                                     </div>
 
                                                 </div>
                                                 <div class="ticket-description">
-                                                    <h4>{{$blog->blogTitle}}</h4>
+                                                    <h4>{{$book->title}}</h4>
 
-                                                    <p>{{ $blog->initalDescr }}</p>
-                                                    <p>{{ $blog->moreDescr }}</p>
+                                                    <p>{{ $book->initalDescr }}</p>
+                                                    <p>{{ $book->amount }}</p>
                                                 </div>
                                                 <button class="btn btn-primary" data-toggle="modal"
                                             data-target="#exampleModal">Edit the Post</button>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="card-body">
-                                    <form action="{{ url('gsaafrica/blog_update/'.$blog->id) }}" method="POST"
+                                    <form action="{{ url('book_update/'.$book->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @method('PUT')
                                         @csrf
@@ -91,7 +91,7 @@
                                             <div class="form-group col-md-12">
                                                 <label for="inputEmail4">Title</label>
                                                 <input type="text" class="form-control" id="inputEmail4" 
-                                                    name="blogTitle" placeholder="title of publications" value="{{$blog->blogTitle}}">
+                                                    name="blogTitle" placeholder="title of publications" value="{{$book->title}}">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -102,16 +102,16 @@
                                         <div class="form-group">
                                             <label for="inputAddress">Publication Date</label>
                                             <input type="date" class="form-control" id="inputAddress"
-                                                name="publDate" placeholder="date" value="{{$blog->publDate}}">
+                                                name="publDate" placeholder="date" value="{{$book->date}}">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress2">Initial Descriptions</label>
-                                            <textarea id="" class="form-control" cols="30" rows="20" name="initalDescr" value="{{$blog->initalDescr}}"></textarea>
+                                            <textarea id="" class="form-control" cols="30" rows="20" name="initalDescr" value="{{$book->initalDescr}}"></textarea>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="inputAddress2">More Descriptions</label>
-                                            <textarea id="" class="form-control" cols="40" rows="30" name="moreDescr" value="{{$blog->moreDescr}}"></textarea>
+                                            <textarea id="" class="form-control" cols="40" rows="30" name="moreDescr" value="{{$book->amount}}"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">

@@ -43,25 +43,25 @@
                                                 </thead>
                                                 <tbody>
 
-                                                    @foreach ($publications as $publication)
+                                                    @foreach ($schools as $school)
                                                         <tr>
                                                             <td>
-                                                                {{ $publication->id }}
+                                                                {{ $school->id }}
                                                             </td>
-                                                            <td>{{ $publication->title }}</td>
-                                                            <td>{{ $publication->publication_date }}</td>
+                                                            <td>{{ $school->name }}</td>
+                                                            <td>{{ $school->email }}</td>
 
                                                             <td>
-                                                                {{ $publication->description }}
+                                                                {{ $school->location }}
                                                             </td>
                                                             <td>
                                                                 <a class="btn btn-primary btn-action mr-1"
-                                                                    href="{{ asset('\storage\app\public\documents' . $publication->coverImage) }}"
+                                                                    href="{{ asset('\storage\app\public\documents' . $school->coverImage) }}"
                                                                     data-toggle="tooltip" title="view"><i
                                                                         class="fas fa-eye"></i></a>
 
                                                                 <a class="btn btn-danger btn-action" data-toggle="modal"
-                                                                    data-target="#confirmDeleteModal{{ $publication->id }}">
+                                                                    data-target="#confirmDeleteModal{{ $school->id }}">
                                                                     <i class="fas fa-trash"></i>
                                                                 </a>
                                                             </td>
@@ -80,11 +80,11 @@
                         </div>
                     </div>
                 </section>
-                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{ $publication->id }}">
+                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{ $schools->id }}">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="confirmDeleteModal{{ $publication->id }}Label">Confirm
+                                <h5 class="modal-title" id="confirmDeleteModal{{ $schools->id }}Label">Confirm
                                     Delete</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -92,11 +92,11 @@
                             </div>
                             <div class="modal-body">
                                 Are you sure you want to delete this ?
-                                <h5>{{ $publication->title }}.</h5>
+                                <h5>{{ $schools->name }}.</h5>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('publications', $publication->id) }}" method="POST">
+                                <form action="{{ route('school', $schools->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="card-body">
-                                    <form action="{{ route('post_publications') }}" method="post"
+                                    <form action="{{ route('post_school') }}" method="post"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-row">
