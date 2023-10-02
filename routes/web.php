@@ -47,8 +47,10 @@ Route::get('/publiSite',[SiteController::class,'publiSite'])->name('publiSite');
 
 Route::get('/blogs', [SiteController::class, 'blogSite'])->name('blogSite');
 Route::get('/blogs/{id}',[SiteController::class,'singleBlog'])->name('singleBlog');
-
 Route::get('/site/managemet', [SiteController::class, 'siteManagement'])->name('site_management');
+Route::post('/parent',[SiteController::class, 'ParentRegistration'])->name('parentRegistration');
+Route::post('/school',[SiteController::class, 'SchoolRegistration'])->name('schoolRegistration');
+
 Auth::routes();
 
 

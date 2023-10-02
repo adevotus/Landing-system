@@ -29,7 +29,7 @@
                   </div>
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <form class="row g-4 mt-5" method = "post" action = "{{route('parentRegistration')}}" enctype="multipart/form-data">
+                      <form class="row g-4 mt-5" action="{{route('parentRegistration')}}"  method = "post" enctype="multipart/form-data">
                         @csrf
                         <div class="col-sm-6 col-md-6 col-xl-5">
                           <div class="input-group-icon">
@@ -62,7 +62,7 @@
                       </form>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <form class="row g-4 mt-5" method = "post" action="{{route('schoolRegistration'}}" enctype="multipart/form-data" >
+                      <form class="row g-4 mt-5" action="{{route('schoolRegistration')}}"  method = "post" enctype="multipart/form-data" >
                         @csrf
                         <div class="col-6">
                           <div class="input-group-icon">
