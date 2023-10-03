@@ -22,7 +22,6 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        {{-- <h4>Basic DataTables</h4> --}}
                                         <button class="btn btn-primary" data-toggle="modal"
                                             data-target="#exampleModal">Add School.</button>
                                     </div>

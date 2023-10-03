@@ -9,7 +9,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Feedbacks and Contacts Messages</h1>
+                        <h1>Videos </h1>
 
                     </div>
 
@@ -20,9 +20,11 @@
                             <div class="col-12">
 
                                 <div class="card">
-                                    <div class="card-header">
-                                        {{-- <span><a href="{{ route('create_staff') }}"><h4 class="btn btn-primary">create staff</h4></a> </span> --}}
+                                <div class="card-header">
+                                        <button class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModal">Add Video.</button>
                                     </div>
+                                  
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-striped" id="table-1">
@@ -31,10 +33,12 @@
                                                         <th class="text-center">
                                                             #
                                                         </th>
-                                                        <th>Name</th>
+                                                        <th>Title</th>
                                                         <th>date</th>
-                                                        <th>link</th>
+                                                        <th>Cover Image</th>
+
                                                         <th>Action</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -46,17 +50,13 @@
                                                             <td>{{ $video->title }}</td>
                                                             <td>
                                                                 {{ $video->date }}
-
                                                             </td>
-                                                         <td><a href="{{$video->links}}"></a></td>
+                                                         <td><a href="{{$video->links}}">preview</a></td>
 
                                                             <td>
-                                                                <a class="btn btn-primary btn-action mr-1"data-toggle="modal"
-                                                                    data-target="#exampleModal{{ $video->id }}"><i
-                                                                        class="fas fa-pencil-alt"></i></a>
-                                                                <a class="btn btn-danger btn-action" data-toggle="modal"
-                                                                    data-target="#confirmDeleteModal{{ $video->id }}">
-                                                                    <i class="fas fa-trash"></i>
+                                                            
+                                                                <a class="btn btn-primary  btn-action" href = "{{route('video_edit' $video->id }}">
+                                                                    <i class="fas fa-eye"></i>
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -73,68 +73,59 @@
                             </div>
                         </div>
 
-                        <div class="modal fade" tabindex="-1" role="dialog"
-                            id="confirmDeleteModal{{ $video->id }}">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="confirmDeleteModal{{ $video->id }}Label">
-                                            Confirm Delete</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Are you sure you want to delete this ?
-                                        <h5>{{ $video->name }}.</h5>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Cancel</button>
-                                        <form action="{{ route('video_delete', $video->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form>
-                                    </div>
-                                </div>
+                        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Post the video to Landing</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                        </div>
+                            <div class="modal-body">
+                                <div class="card-body">
+                                    <form action="{{ route('video_post') }}" method="post"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="inputEmail4">Title</label>
+                                                <input type="text" class="form-control" id="inputEmail4"
+                                                    name="title" placeholder="title of video">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">Cover Image</label>
+                                            <input type="file" class="form-control" id="inputAddress"
+                                                name="coverImage" placeholder="1234 Main St">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">Publication Date</label>
+                                            <input type="date" class="form-control" id="inputAddress"
+                                                name="publication_date" placeholder="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress2">Link of Video</label>
+                                            <input type="date" class="form-control" id="inputAddress"
+                                                name="link" placeholder="Link of video">                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
 
-                        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal{{ $video->id }}">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Feedback From contact</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <ul class="list-unstyled list-unstyled-border list-unstyled-noborder">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <button type="submit" class="btn btn-primary btn-block">Submit
+                                                    </button>
+                                            </div>
+                                        </div>
+                                    </form>
 
-                                            <li class="media">
-                                                <img alt="image" class="mr-3 rounded-circle" width="70"
-                                                    src="{{ asset('admin/assets/img/avatar/avatar-1.png') }}">
-                                                <div class="media-body">
-                                                    <div class="media-title mb-1" style="font-weight: 700">
-                                                        {{ $video->title }} , {{ $video->date }}</div>
-                                                    <div class="media-left">
-                                                        <div class="text-primary" style="font-weight: 800;">
-                                                            {{ $video->subject }}</div>
-                                                    </div>
-                                                    <div class="media-description text-muted text-justify">
-                                                        {{ $video->message }}</div>
-
-                                                </div>
-                                            </li>
-
-                                        </ul>
-                                    </div>
 
                                 </div>
                             </div>
+
                         </div>
+                    </div>
+                </div>
 
                     </div>
                 </section>
