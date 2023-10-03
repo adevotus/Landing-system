@@ -10,7 +10,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Clients</h1>
+                        <h1>Testimon</h1>
                         <div class="section-header-breadcrumb">
 
                         </div>
@@ -24,7 +24,7 @@
                                     <div class="card-header">
                                         {{-- <h4>Basic DataTables</h4> --}}
                                         <button class="btn btn-primary" data-toggle="modal"
-                                            data-target="#exampleModal">Add Clients</button>
+                                            data-target="#exampleModal">Add Testimony</button>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -34,29 +34,27 @@
                                                         <th class="text-center">
                                                             #
                                                         </th>
-                                                        <th>Client Name</th>
-                                                        <th>Client Logo</th>
+                                                        <th> Name</th>
+                                                        <th> Image</th>
                                                         <th>Descriptions</th>
-                                                        <th>View client</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($clients as $client)                                            
+                                                    @foreach ($testimons as $testimon)                                            
                                                     <tr>
                                                         <td>
                                                             1
                                                         </td>
-                                                        <td>{{$client->clientName}}</td>
+                                                        <td>{{$testimon->title}}</td>
                                                        
                                                         <td>
-                                                            <img alt="image" src="{{asset('public/images'.$client->clientLogo)}}"
+                                                            <img alt="image" src="{{asset('public/images'.$testimon->Covermage)}}"
                                                                 class="rounded-circle" width="35"
                                                                 data-toggle="tooltip" title="Wildan Ahdian">
                                                         </td>
-                                                        <td>{{$client->description}}</td>
-                                                       
-                                                        <td><a href="{{$client->webLink}}" class="btn btn-secondary">Client Detail</a></td>
+                                                        <td>{{$testimon->initalDescr}}</td>
+                                                    
                                                         <td>
                                                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
                                                             <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
@@ -80,34 +78,41 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Add Client</h5>
+                                <h5 class="modal-title">Add Testimony</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div class="card-body">
-                                    <form action="{{route('client_post')}}" method="post" enctype="multipart/form-data">
+                                    <form action="{{route('testimon_post')}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <label for="inputEmail4">Client Name</label>
-                                                <input type="text" class="form-control" id="inputEmail4" name="clientName"
-                                                    placeholder="title of publications">
+                                                <label for="inputEmail4"> Title</label>
+                                                <input type="text" class="form-control" id="inputEmail4" name="title"
+                                                    placeholder="title of testimon">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress">Client Logo</label>
-                                            <input type="file" class="form-control" id="inputAddress" name="clientLogo"
-                                                placeholder="1234 Main St">
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <label for="inputEmail4">Client website link</label>
-                                                <input type="text" class="form-control" id="inputEmail4" name="webLink"
-                                                    placeholder="title of publications">
+                                                <label for="inputEmail4"> Name</label>
+                                                <input type="text" class="form-control" id="inputEmail4" name="name"
+                                                    placeholder="name of Testimon">
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">Image</label>
+                                            <input type="file" class="form-control" id="inputAddress" name="Covermage"
+                                                placeholder="1234 Main St">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputAddress">Date</label>
+                                            <input type="date" class="form-control" id="inputAddress" name="date"
+                                                placeholder="1234 Main St">
+                                        </div>
+                                      
                                         <div class="form-group">
                                             <label for="inputAddress2">Descriptions</label>
                                             <textarea name="description" id="" class="form-control" cols="30" rows="10"></textarea>
@@ -117,7 +122,7 @@
 
                                             </div>
                                             <div class="col-md-5">
-                                                <button type="submit" class="btn btn-primary btn-block">Add client</button>
+                                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
                                             </div>
                                         </div>
                                     </form>

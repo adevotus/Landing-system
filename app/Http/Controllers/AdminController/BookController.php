@@ -49,7 +49,7 @@ class BookController extends Controller
 
 
         //dd($request->all());
-        $validatedData = new Blog();
+        $validatedData = new Book();
         $validatedData->title = $request->input('title');
         $validatedData->date = $request->input('date');
         $validatedData->initalDescr = $request->input('initalDescr');

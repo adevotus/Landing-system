@@ -22,24 +22,18 @@
                         class="fas fa-columns"></i><span>Schools</span></a>
 
             </li>
-            <li class="dropdown">
-                <a href="{{route('feedback')}}" class="nav-link"><i class="fas fa-th-large"></i> <span>Reviews</span></a>
-
-            </li>
             <li><a class="nav-link" href="{{route('book')}}"><i class="fas fa-exclamation"></i> <span>Books</span></a></li>
-            <li class="dropdown">
-                <a href="{{ route('schools') }}" class="nav-link"><i
-                        class="fas fa-columns"></i><span>Reviews</span></a>
 
-            </li>
-            {{-- <li class="dropdown">
-                <a href="{{route('feedback')}}" class="nav-link"><i class="fas fa-th-large"></i> <span>Feedback</span></a>
+            <li class="dropdown">
+                <a href="{{route('video')}}" class="nav-link"><i class="fas fa-th-large"></i> <span>Video</span></a>
 
             </li>
             <li class="dropdown">
-                <a href="{{route('client')}}" class="nav-link"><i class="fas fa-plug"></i> <span>Client</span></a>
+                <a href="{{route('testimon')}}" class="nav-link"><i class="fas fa-plug"></i> <span>Testimon</span></a>
 
-            </li> --}}
+            </li>
+      
+        
 
 
 

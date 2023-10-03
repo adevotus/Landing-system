@@ -1,13 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdminController\BookController;
-use App\Http\Controllers\AdminController\ClientController;
+use App\Http\Controllers\AdminController\TestimonController;
+use App\Http\Controllers\AdminController\VideoController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
-
 use App\Http\Controllers\AdminController\DashboardController;
 use App\Http\Controllers\AdminController\FeedbackController;
 use App\Http\Controllers\AdminController\SchoolsController;
@@ -70,12 +69,20 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
     Route::get('/schools/{id}/edit', [SchoolsController::class, 'edit'])->name('school_edit');
     Route::put('schools/{id}', [SchoolsController::class, 'update'])->name('school_update');
 
-    //client
-    Route::get('/client', [ClientController::class, 'client'])->name('client');
-    Route::post('/client', [ClientController::class, 'store'])->name('client_post');
-    Route::delete('/client/{id}', [ClientController::class, 'destory'])->name('client_delete');
-    Route::get('/client/{id}/edit', [ClientController::class, 'edit'])->name('client_edit');
-    Route::put('/client/{id}', [ClientController::class, 'update'])->name('client_update');
+    //Testimon
+    Route::get('/testimon', [TestimonController::class, 'testimon'])->name('testimon');
+    Route::post('/testimon', [TestimonController::class, 'store'])->name('testimon_post');
+    Route::delete('/testimon/{id}', [TestimonController::class, 'destory'])->name('testimon_delete');
+    Route::get('/testimon/{id}/edit', [TestimonController::class, 'edit'])->name('testimon_edit');
+    Route::put('/testimon/{id}', [TestimonController::class, 'update'])->name('testimon_update');
+
+    //CoverImage
+    Route::get('/video', [VideoController::class, 'video'])->name('video');
+    Route::post('/video', [VideoController::class, 'store'])->name('video_post');
+    Route::delete('/video/{id}', [VideoController::class, 'destory'])->name('video_delete');
+    Route::get('/video/{id}/edit', [VideoController::class, 'edit'])->name('video_edit');
+    Route::put('/video/{id}', [VideoController::class, 'update'])->name('video_update');
+  
 
 
     //blog
