@@ -42,7 +42,6 @@ Route::post('/school',[SiteController::class, 'SchoolRegistration'])->name('scho
 
 Auth::routes();
 
-
 Route::middleware(['auth', 'isAdministrator'])->group(function () {
     Route::get('/admin_home', [DashboardController::class, 'dashboard'])->name('admin_home');
 
@@ -58,7 +57,7 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
     Route::get('/create_parent', [ParentController::class, 'create_parent'])->name('create_parent');
     Route::post('/parent', [ParentController::class, 'store'])->name('parent_registration');
     Route::delete('/parent/{id}', [ParentController::class, 'destroy'])->name('parent_delete');
-    Route::get('/parent/{id}/edit', [ParentController::class, 'edit'])->name('parent_edit');
+    Route::get('/parent/{id}/edit', [ParentController::class, 'show'])->name('parent_edit');
     Route::put('/parent/{id}', [ParentController::class, 'update'])->name('parent_update');
 
 
@@ -91,7 +90,7 @@ Route::middleware(['auth', 'isAdministrator'])->group(function () {
     Route::post('/book', [BookController::class, 'store'])->name('book_post');
     Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('book_delete');
     Route::put('/book_update/{id}', [BookController::class, 'update'])->name('book_update');
-    Route::put('/book/{id}', [BookController::class, 'IndividualBlog'])->name('IndividualBlog');
+    Route::get('/book/{id}', [BookController::class, 'IndividualBook'])->name('IndividualBook');
 
 
     //feedback

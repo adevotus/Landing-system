@@ -14,7 +14,7 @@ class SchoolsController extends Controller
 
     public function school()
     {
-        $schools = school::get();
+        $schools = School::get();
         return view('admin.pages.publication', [
             'schools' => $schools,
 

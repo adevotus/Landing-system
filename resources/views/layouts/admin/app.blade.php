@@ -23,7 +23,7 @@
                                         <h4>Total School</h4>
                                     </div>
                                     <div class="card-body">
-                                        {{ $totalStaffs }}
+                                        {{ $totalSchool }}
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                         <h4>Parents</h4>
                                     </div>
                                     <div class="card-body">
-                                        {{ $totalBlogs }}
+                                        {{ $totalParent }}
                                     </div>
                                 </div>
                             </div>
@@ -50,10 +50,10 @@
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>publications</h4>
+                                        <h4>Testimony</h4>
                                     </div>
                                     <div class="card-body">
-                                        {{ $totalPublications }}
+                                        {{ $totalTestimon }}
                                     </div>
                                 </div>
                             </div>
@@ -65,10 +65,10 @@
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Reviews</h4>
+                                        <h4>Books</h4>
                                     </div>
                                     <div class="card-body">
-                                        {{ $totalClients }}
+                                        {{ $totalBooks }}
                                     </div>
                                 </div>
                             </div>
@@ -98,25 +98,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-12 col-sm-6 col-md-6 col-lg-5">
-                            @foreach ($blogs as $blog)
-                            <article class="article article-style-b">
-                              <div class="article-header">
-                                <div class="article-image" data-background="{{ asset('public/images/' . $blog->blogImage) }}">
-                                </div>
-                              </div>
-                              <div class="article-details">
-                                <div class="article-title">
-                                  <h2><a href="#">{{ $blog->blogTitle }}</a></h2>
-                                </div>
-                                <p class="text-justify">{{ $blog->initalDescr }}</p>
-                                <div class="article-cta">
-                                  {{-- <a href="#">Read More <i class="fas fa-chevron-right"></i></a> --}}
-                                </div>
-                              </div>
-                            </article>
-                            @endforeach
-                          </div>
+                        
                       
                     </div>
                 </section>

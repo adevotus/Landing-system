@@ -32,15 +32,14 @@ class BookController extends Controller
         return view('admin.pages.components.create_blog');
     }
 
-    public function IndividualBlog($slug){
+    public function IndividualBook($id){
 
-        $latest = Book::latest('slug')->get();
-        $book = Book::find($slug);
+        $book = Book::find($id);
         $books = Book::get();
-        return view('admin.pages.components.IndividualBlog',[
-            'book'=>$book,
-            'latest'=>$latest,
-            'books'=>$books
+        
+        return view('admin.pages.components.IndividualBook', [
+            'book' => $book,
+            'books' => $books
         ]);
     }
 

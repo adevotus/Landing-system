@@ -106,33 +106,7 @@
                         </div>
                       </form>
                     </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                      <form class="row g-4 mt-5">
-                        <div class="col-6">
-                          <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputDateFive" type="date" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="input-group-icon">
-                            <input class="form-control input-box form-voyage-control" id="inputDateSix" type="date" /><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="input-group-icon">
-                            <label class="form-label visually-hidden" for="inputPeopleThree">Person</label>
-                            <select class="form-select form-voyage-select input-box" id="inputPeopleThree">
-                              <option selected="selected">2 Adults</option>
-                              <option>2 Adults 1 children</option>
-                              <option>2 Adults 2 children</option>
-                            </select><span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"> </i></span>
-                          </div>
-                        </div>
-                        <div class="col-12 d-grid mt-6">
-                          <button class="btn btn-secondary" type="submit">Submit</button>
-                        </div>
-                      </form>
-                    </div>
+                   
                   </div>
                 </nav>
               </div>
@@ -525,11 +499,10 @@
         </div>
       </section>
       <section class="py-7 overflow-hidden" id="places">
-      <div class="col-lg-7 mx-auto text-center mb-6">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Covers and It's Links</h5>
+        <div class="col-lg-7 mx-auto text-center mb-6">
+             <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Covers and It's Links video</h5>
             </div>
         <div class="container bg-offcanvas-gray-right">
-       
           <div class="row g-2">
             <div class="col-sm-6 col-lg-4">
               <div class="row g-2">
@@ -552,51 +525,62 @@
                 </div>
 
                 <div class="col-12">
-                  <div class="card card-span h-100 text-white position-relative">
-                    <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_3.jpg')}}" height="375" alt="..." />
-                    <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                      <div class="mt-auto px-4 mb-1">
-                        <h3 class="fs-1 fs-md-2 text-white">Munich</h3>
-                        <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
-                        <span class="text-light me-3">10 Packages</span>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                    <!-- Add a play button overlay -->
-                    <div class="play-button bg-danger">
+                      <div class="card card-span h-100 text-white position-relative">
+                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_3.jpg')}}" height="375" alt="..." />
+                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
+                          <div class="mt-auto px-4 mb-1">
+                            <h3 class="fs-1 fs-md-2 text-white">Work Hards</h3>
+                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
+                            <span class="text-light me-3">10 Packages</span>
+                          </div>
+                          <a class="stretched-link" href="#!"></a>
+                        </div>
+                        <!-- Add a play button overlay -->
+                        <div class="play-button bg-danger">
                           <i class="fa fa-play-circle"></i>
                         </div>
+                      </div>
                 </div>
               </div>
             </div>
+
+
             <div class="col-sm-6 col-lg-4">
               <div class="row g-2">
-                <div class="col-12">
-                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_2.jpg')}}" height="375" alt="..." />
-                    <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                      <div class="mt-auto px-4 mb-1">
-                        <h3 class="fs-1 fs-md-2 text-white">Paris</h3><span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span><span class="text-light me-3">10 Packages</span>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                    <!-- Add a play button overlay -->
-                    <div class="play-button bg-danger">
+              <div class="col-12">
+                      <div class="card card-span h-100 text-white position-relative">
+                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_2.jpg')}}" height="375" alt="..." />
+                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
+                          <div class="mt-auto px-4 mb-1">
+                            <h3 class="fs-1 fs-md-2 text-white">Social</h3>
+                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
+                            <span class="text-light me-3">10 Packages</span>
+                          </div>
+                          <a class="stretched-link" href="#!"></a>
+                        </div>
+                        <!-- Add a play button overlay -->
+                        <div class="play-button bg-danger">
                           <i class="fa fa-play-circle"></i>
                         </div>
+                      </div>
                 </div>
+
                 <div class="col-12">
-                  <div class="card card-span h-100 text-white">
-                    <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_1.jpg')}}" height="375" alt="..." />
-                    <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                      <div class="mt-auto px-4 mb-1">
-                        <h3 class="fs-1 fs-md-2 text-white">Vienna</h3><span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span><span class="text-light me-3">10 Packages</span>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                    <!-- Add a play button overlay -->
-                    <div class="play-button bg-danger">
+                      <div class="card card-span h-100 text-white position-relative">
+                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_1.jpg')}}" height="375" alt="..." />
+                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
+                          <div class="mt-auto px-4 mb-1">
+                            <h3 class="fs-1 fs-md-2 text-white">Economy</h3>
+                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
+                            <span class="text-light me-3">10 Packages</span>
+                          </div>
+                          <a class="stretched-link" href="#!"></a>
+                        </div>
+                        <!-- Add a play button overlay -->
+                        <div class="play-button bg-danger">
                           <i class="fa fa-play-circle"></i>
                         </div>
+                      </div>
                 </div>
               </div>
             </div>

@@ -23,7 +23,7 @@
                                 <div class="card-header">
                                         <button class="btn btn-primary" data-toggle="modal"
                                             data-target="#exampleModal">Add Video.</button>
-                                    </div>
+                                </div>
                                   
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -61,10 +61,6 @@
                                                             </td>
                                                         </tr>
                                                     @endforeach
-
-
-
-
                                                 </tbody>
                                             </table>
                                         </div>
@@ -73,9 +69,9 @@
                             </div>
                         </div>
 
-                        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                    <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+                         <div class="modal-dialog" role="document">
+                          <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Post the video to Landing</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

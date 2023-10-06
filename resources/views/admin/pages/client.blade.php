@@ -44,7 +44,7 @@
                                                     @foreach ($testimons as $testimon)                                            
                                                     <tr>
                                                         <td>
-                                                            1
+                                                            {{$testimon->name}}
                                                         </td>
                                                         <td>{{$testimon->title}}</td>
                                                        
@@ -56,8 +56,7 @@
                                                         <td>{{$testimon->initalDescr}}</td>
                                                     
                                                         <td>
-                                                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                                                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
+                                                            <a class="btn btn-primary btn-action mr-1" href = "{{route('testimon_edit', $testimon->id}}"><i class="fas fa-pencil-alt"></i></a>
                                                           </td>
                                                     </tr>
                                                     @endforeach
@@ -115,7 +114,7 @@
                                       
                                         <div class="form-group">
                                             <label for="inputAddress2">Descriptions</label>
-                                            <textarea name="description" id="" class="form-control" cols="30" rows="10"></textarea>
+                                            <textarea name="initalDescr" id="" class="form-control" cols="30" rows="10"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">

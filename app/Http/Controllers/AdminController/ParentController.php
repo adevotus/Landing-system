@@ -9,12 +9,7 @@ use Illuminate\Support\Facades\Crypt;
 
 class   ParentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-  
+   
 
     public function parent()
     {
@@ -77,7 +72,12 @@ class   ParentController extends Controller
      */
     public function show($id)
     {
-        //
+        $parent = Gudian::find($id);
+        $parents = Gudian::get();
+        
+        return view('admin.pages.components.create_staff',[
+            'parent'=>$parent
+        ]);
     }
 
     /**
@@ -89,7 +89,6 @@ class   ParentController extends Controller
     public function edit($id)
     {
         $encryptedId = Crypt::encryptString($id);
-
         $parents = Gudian::get();
         return view('admin.pages.staff', compact('parents'));
     }

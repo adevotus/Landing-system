@@ -55,13 +55,11 @@
                                                             </td>
                                                             <td>
                                                                 <a class="btn btn-primary btn-action mr-1"
-                                                                    href="{{ asset('\storage\app\public\documents' . $school->coverImage) }}"
+                                                                    href="{{route('school_edit' , $school->id}}"
                                                                     data-toggle="tooltip" title="view"><i
                                                                         class="fas fa-eye"></i></a>
 
-                                                                <a class="btn btn-danger btn-action" data-toggle="modal"
-                                                                    data-target="#confirmDeleteModal{{ $school->id }}">
-                                                                    <i class="fas fa-trash"></i>
+                                                             
                                                                 </a>
                                                             </td>
 
@@ -79,7 +77,7 @@
                         </div>
                     </div>
                 </section>
-                <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{ $schools->id }}">
+                <!-- <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{ $schools->id }}">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -103,13 +101,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Post the Publications</h5>
+                                <h5 class="modal-title">Add school</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -121,24 +119,30 @@
                                         @csrf
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <label for="inputEmail4">Title</label>
+                                                <label for="inputEmail4">Name</label>
                                                 <input type="text" class="form-control" id="inputEmail4"
-                                                    name="title" placeholder="title of publications">
+                                                    name="name" placeholder="title of publications">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputAddress">Documents</label>
-                                            <input type="file" class="form-control" id="inputAddress"
-                                                name="coverImage" placeholder="1234 Main St">
+                                            <label for="inputAddress">Region</label>
+                                            <input type="text" class="form-control" id="inputAddress"
+                                                name="region" placeholder="1234 Main St">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputAddress">Publication Date</label>
-                                            <input type="date" class="form-control" id="inputAddress"
-                                                name="publication_date" placeholder="date">
+                                            <label for="inputAddress2">Email</label>
+                                            <input type="number" class="form-control" id="inputAddress"
+                                                name="email" placeholder="email@gmail.com">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputAddress2">Descriptions</label>
-                                            <textarea id="" class="form-control" cols="30" rows="10" name="description"></textarea>
+                                            <label for="inputAddress">Phonenumber </label>
+                                            <input type="number" class="form-control" id="inputAddress"
+                                                name="phoneNumber" placeholder="number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress2">Email</label>
+                                            <input type="number" class="form-control" id="inputAddress"
+                                                name="email" placeholder="email@gmail.com">
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">
@@ -146,7 +150,7 @@
                                             </div>
                                             <div class="col-md-5">
                                                 <button type="submit" class="btn btn-primary btn-block">Save
-                                                    changes</button>
+                                                    </button>
                                             </div>
                                         </div>
                                     </form>
