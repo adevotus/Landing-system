@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Testimon;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
@@ -30,8 +31,8 @@ class TestimonController extends Controller
              $validatedData->slug = Str::slug($validatedData->title);
              if ($request->hasFile('Covermage')) {
                  $Covermage = $request->file('Covermage');
-                 $CovermageName = time() . '.' . $clientLogo->getClientOriginalExtension();
-                 $clientLogo->move(public_path('public/images'), $CovermageName);
+                 $CovermageName = time() . '.' . $Covermage->getClientOriginalExtension();
+                 $Covermage->move(public_path('public/images'), $CovermageName);
                  $validatedData->Covermage = $CovermageName;
                  if (file_exists(public_path('images/' . $validatedData->Covermage))) {
                      unlink(public_path('images/' . $validatedData->Covermage));

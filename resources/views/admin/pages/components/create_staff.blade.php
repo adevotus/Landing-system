@@ -8,107 +8,156 @@
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
-                    <div class="section-header">
-                        <div class="section-header-back">
-                            <a href="{{ route('gsa_staffs') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
-                        </div>
-                        <h1>Register the new parent</h1>
-
+                    <div class="section-header">  
+                      <h1>Parent Name: <span>{{$parent->name}}</span></h1>
                     </div>
 
                     <div class="section-body">
+                      
 
+                        <div class="row mt-sm-4">
+                            <div class="col-12 col-md-12 col-lg-5">
+                            <div class="card profile-widget">
+                                   
 
-                        <div class="row">
-                            <div class="col-12">
+                                            <div class="profile-widget-description">
+                                                <div class="profile-widget-name">{{ $parent->name }}
+                                                    <div class="text-muted d-inline font-weight-normal">
+                                                        <div class="slash"></div>Parent
+                                                    </div>
+                                                </div>
+
+                                                    <p class="text-justify">
+                                                    As an administrator, you are responsible for managing this website in the best possible way. Your role involves
+                                                                                                                                    ensuring smooth operations, 
+                                                                                                                                    maintaining high-quality content, and providing an excellent user experience. 
+                                                                                                                                    Take charge and make a positive impact!
+                                                                                                                                    Feel free to explore the various features and functionalities available to you. Should you have any questions or
+                                                                                                                                    need assistance, 
+                                                                                                                                    don't hesitate to reach out. We wish you great success in your role as the website administrator.
+                                                    </p>
+                                           
+                                                <!-- Your profile description content here -->
+                                            </div>
+                            </div>
+
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-7">
+                                <div class="">
+
+                                </div>
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Write Your Post</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4>Person Informations</h4>
+                                        <div class="row">
+                                            <div class="col-8 col-md-8 col-lg-7">
+                                            <h4>Edit Profile</h4>
+                                            </div>
+                                            <div class="col-4 justify-contant-end col-md-4 col-lg-4">
+                                              <span class="btn  btn-danger"data-toggle="modal"
+                                            data-target="#exampleModal-{{$parent->id}}"> delete</span>
 
-                                        <form action="{{route('staff_registration')}}" method="post" enctype="multipart/form-data">
-                                            @csrf
-                                            <div class="form-row">
-                                                <div class="col-md-2"></div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">First Name</label>
-                                                    <input type="text" class="form-control" id="inputEmail4" name="Fname"
-                                                        placeholder="first name">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">Middle Name</label>
-                                                    <input type="text" class="form-control" id="inputEmail4" name="Mname"
-                                                        placeholder="middle name">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">Last Name</label>
-                                                    <input type="text" class="form-control" id="inputEmail4" name="Lname"
-                                    
-                                                        placeholder="last name">
-                                                </div>
-    
                                             </div>
-                                            <div class="form-row">
-                                                <div class="col-md-2"></div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">Email</label>
-                                                    <input type="email" class="form-control" id="inputEmail4" name="email"
-                                                        placeholder="Email">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">Contact</label>
-                                                    <input type="number" class="form-control" id="inputEmail4" name="contact"
-                                                        placeholder="contact">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputEmail4">Location</label>
-                                                    <input type="text" class="form-control" id="inputEmail4"name="location"
-                                                        placeholder="location">
-                                                </div>
-    
-                                            </div>
-    
-                                            <h4>Job Informations</h4>
-                                            <div class="form-row">
-                                                <div class="col-md-2"></div>
-                                                <div class="form-group col-md-5">
-                                                    <label for="inputEmail4">Job Title</label>
-                                                    <input type="text" class="form-control" id="inputEmail4" name="job_title"
-                                                        placeholder="job title">
-                                                </div>
-                                                <div class="form-group col-md-4">
-                                                    <label for="inputEmail4">Positions</label>
-                                                    <input type="text" class="form-control" id="inputEmail4" name="job_position"
-                                                        placeholder="job positions">
-                                                </div>
-    
-    
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col-md-2"></div>
-                                                <div class="form-group col-md-9">
-                                                    <label for="inputEmail4">Descriptions</label>
-                                                    <textarea placeholder="your descriptions" id="" class="form-control" name="description" cols="30" rows="20"></textarea>
-    
-                                                </div>
-                                            </div>
-    
-    
-                                            <div class="form-group row mb-4">
-                                                <div class="col-md-4"></div>
-                                                <div class="col-sm-12 col-md-4">
-                                                    <button type="submit" class="btn btn-primary btn-block">Register Staff</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                       
+                                        </div>
+                                        
                                     </div>
-                                </div>
+                                    <form method="{{route('parent_update',$parent->id)}}" action="" class="needs-validation"
+                                        novalidate="" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>Name</label>
+                                                    <input type="text" class="form-control"
+                                                        value="{{ $parent->name }}" required="" name="name">
+                                                    <div class="invalid-feedback">
+                                                        Please fill in the first name
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>Email</label>
+                                                    <input type="text" class="form-control"
+                                                        value="{{ $parent->email }}" required="" name="email">
+                                                    <div class="invalid-feedback">
+                                                        Please fill in the email
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>Name</label>
+                                                    <input type="text" class="form-control"
+                                                        value="{{ $parent->region }}" required="" name="region">
+                                                    <div class="invalid-feedback">
+                                                        Please fill in the region
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>Email</label>
+                                                    <input type="text" class="form-control"
+                                                        value="{{ $parent->contact }}" required="" name="contact">
+                                                    <div class="invalid-feedback">
+                                                        Please fill in the contact
+                                                    </div>
+                                                </div>
+                                            </div>
+           
+
+                                        </div>
+                                        <div class="card-footer text-left">
+                                            <button class="btn btn-primary" type="submit">Save Changes</button>
+                                        </div>
+                                    </form>
+                                  </div>
+
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal-{{$parent->id}}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Delete </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card-body">
+                                        <form action="{{ route('parent_delete',$parent->id) }}" method="post"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    
+                                                    <p>Are  sure to Delete? {{$parent->name}}</p>
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="row">
+                                                <div class="col-md-3">
+
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <button type="submit" class="btn btn-primary btn-block">Save
+                                                        </button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                   
                 </section>
             </div>
            @include('layouts.admin.footer')

@@ -10,7 +10,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Blog</h1>
+                        <h1>Book</h1>
                         <div class="section-header-breadcrumb">
 
                         </div>
@@ -34,11 +34,11 @@
                                             <table class="table table-striped" id="table-1">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">
-                                                            #
-                                                        </th>
+                                                      
                                                         <th>Title</th>
                                                         <th> Date</th>
+                                                        <th> Amount</th>
+
                                                         <th>Image</th>
                                                         <th>Initia Desctiption</th>
                                                         <th>Action</th>
@@ -47,13 +47,13 @@
                                                 <tbody>
                                                     @foreach ($books as $book )
                                                     <tr>
-                                                        <td>
-                                                            {{$book->id}}
-                                                        </td>
+                                                       
                                                         <td>{{$book->title}}</td>
                                                         <td class="align-middle">
                                                             {{$book->date}}
                                                         </td>
+                                                        <td><span>Tsh </span>{{$book->amount}} <span class = >/=</span></td>
+
                                                         <td>
                                                             <img alt="image" src="{{asset('public/images/'.$book->Covermage)}}"
                                                                 class="rounded-circle" width="35"
@@ -62,10 +62,11 @@
                                                         <td>{{$book->initalDescr}}</td>
                                                        
                                                         <td>
-                                                            <a class="btn btn-primary btn-action" href ="{{route('IndividualBook' , $book->id }}">
+                                                            <a class="btn btn-primary btn-action" href="{{ route('IndividualBook', $book->id) }}">
                                                                 <i class="fas fa-eye"></i>
                                                             </a>
-                                                          </td>
+                                                        </td>
+
                                                     </tr>
                                                     @endforeach
                                                     
@@ -80,31 +81,8 @@
                     </div>
                 </section>
 
-<!-- 
-                <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="confirmDeleteModal{{$book->id}}Label">Confirm Delete</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to delete this blog? 
-                                <h5>{{$blog->blogTitle}}.</h5>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('book_delete', $book->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+
+              
 
                 <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
                          <div class="modal-dialog" role="document">
@@ -124,13 +102,13 @@
                                             <div class="form-group col-md-12">
                                                 <label for="inputEmail4">Title</label>
                                                 <input type="text" class="form-control" id="inputEmail4"
-                                                    name="title" placeholder="title of video">
+                                                    name="title" placeholder="title of book">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">Cover Image</label>
                                             <input type="file" class="form-control" id="inputAddress"
-                                                name="Covermage" placeholder="1234 Main St">
+                                                name="Covermage" placeholder="image">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">Publication Date</label>
@@ -140,7 +118,7 @@
                                         <div class="form-group">
                                             <label for="inputAddress2">Amount</label>
                                             <input type="number" class="form-control" id="inputAddress"
-                                                name="amount" placeholder="Link of video">   
+                                                name="amount" placeholder="2999">   
                                             
                                         </div>
                                         <div class="form-group">
@@ -164,7 +142,7 @@
                             </div>
 
                         </div>
-                    </div>
+                </div>
             </div>
             @include('layouts.admin.footer')
 

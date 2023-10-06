@@ -28,7 +28,7 @@ class SchoolsController extends Controller
         $validatedData = new School();
         $validatedData->name = $request->input('name');
         $validatedData->region = $request->input('region');
-        $validatedData->contact = $request->input('phoneNumber');
+        $validatedData->phoneNumber = $request->input('phoneNumber');
         $validatedData->email = $request->input('email');
 
         if ($validatedData->save()) {
@@ -58,7 +58,7 @@ class SchoolsController extends Controller
         $validatedData = School::find($id);
         $validatedData->name = $request->input('name');
         $validatedData->region = $request->input('region');
-        $validatedData->contact = $request->input('phoneNumber');
+        $validatedData->phoneNumber = $request->input('phoneNumber');
         $validatedData->email = $request->input('email');
 
 

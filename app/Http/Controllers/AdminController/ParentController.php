@@ -74,7 +74,6 @@ class   ParentController extends Controller
     {
         $parent = Gudian::find($id);
         $parents = Gudian::get();
-        
         return view('admin.pages.components.create_staff',[
             'parent'=>$parent
         ]);

@@ -30,13 +30,11 @@
                                             <table class="table table-striped" id="table-1">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">
-                                                            #
-                                                        </th>
-                                                        <th>Publication Title</th>
-                                                        <th>Publication date</th>
-                                                        <th>Descriptions</th>
-
+                                                       
+                                                        <th>School Name</th>
+                                                        <th>Email </th>
+                                                        <th>Location</th>
+                                                        <th>Contant</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -44,24 +42,24 @@
 
                                                     @foreach ($schools as $school)
                                                         <tr>
-                                                            <td>
-                                                                {{ $school->id }}
-                                                            </td>
+                                                           
                                                             <td>{{ $school->name }}</td>
                                                             <td>{{ $school->email }}</td>
 
                                                             <td>
-                                                                {{ $school->location }}
+                                                                {{ $school->region }}
                                                             </td>
                                                             <td>
-                                                                <a class="btn btn-primary btn-action mr-1"
-                                                                    href="{{route('school_edit' , $school->id}}"
-                                                                    data-toggle="tooltip" title="view"><i
-                                                                        class="fas fa-eye"></i></a>
-
-                                                             
-                                                                </a>
+                                                                {{ $school->phoneNumber }}
                                                             </td>
+                                                            <td>
+                                                            <a class="btn btn-primary btn-action mr-1"
+                                                                href="{{ route('school_edit', $school->id) }}"
+                                                                data-toggle="tooltip" title="View">
+                                                                <i class="fas fa-eye"></i>
+                                                            </a>
+                                                        </td>
+
 
                                                         </tr>
                                                     @endforeach
@@ -77,31 +75,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- <div class="modal fade" tabindex="-1" role="dialog" id="confirmDeleteModal{{ $schools->id }}">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="confirmDeleteModal{{ $schools->id }}Label">Confirm
-                                    Delete</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to delete this ?
-                                <h5>{{ $schools->name }}.</h5>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <form action="{{ route('school', $schools->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+              
 
                 <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
                     <div class="modal-dialog" role="document">
@@ -121,17 +95,17 @@
                                             <div class="form-group col-md-12">
                                                 <label for="inputEmail4">Name</label>
                                                 <input type="text" class="form-control" id="inputEmail4"
-                                                    name="name" placeholder="title of publications">
+                                                    name="name" placeholder="school name">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">Region</label>
                                             <input type="text" class="form-control" id="inputAddress"
-                                                name="region" placeholder="1234 Main St">
+                                                name="region" placeholder="Rukwa">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress2">Email</label>
-                                            <input type="number" class="form-control" id="inputAddress"
+                                            <input type="email" class="form-control" id="inputAddress"
                                                 name="email" placeholder="email@gmail.com">
                                         </div>
                                         <div class="form-group">
@@ -139,11 +113,7 @@
                                             <input type="number" class="form-control" id="inputAddress"
                                                 name="phoneNumber" placeholder="number">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress2">Email</label>
-                                            <input type="number" class="form-control" id="inputAddress"
-                                                name="email" placeholder="email@gmail.com">
-                                        </div>
+                                       
                                         <div class="row">
                                             <div class="col-md-3">
 

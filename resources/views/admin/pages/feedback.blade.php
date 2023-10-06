@@ -53,12 +53,12 @@
                                                             </td>
                                                          <td><a href="{{$video->links}}">preview</a></td>
 
-                                                            <td>
-                                                            
-                                                                <a class="btn btn-primary  btn-action" href = "{{route('video_edit' $video->id }}">
-                                                                    <i class="fas fa-eye"></i>
-                                                                </a>
-                                                            </td>
+                                                         <td>
+                                            <a class="btn btn-primary btn-action" href="{{ route('video_edit', $video->id) }}">
+                                                <i class="fas fa-eye"></i>
+                                               </a>
+                                                </td>
+
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -102,7 +102,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress2">Link of Video</label>
-                                            <input type="date" class="form-control" id="inputAddress"
+                                            <input type="text" class="form-control" id="inputAddress"
                                                 name="link" placeholder="Link of video">                                        </div>
                                         <div class="row">
                                             <div class="col-md-3">

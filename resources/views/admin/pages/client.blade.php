@@ -49,15 +49,16 @@
                                                         <td>{{$testimon->title}}</td>
                                                        
                                                         <td>
-                                                            <img alt="image" src="{{asset('public/images'.$testimon->Covermage)}}"
+                                                            <img alt="image" src="{{asset('public/images/'.$testimon->Covermage)}}"
                                                                 class="rounded-circle" width="35"
                                                                 data-toggle="tooltip" title="Wildan Ahdian">
                                                         </td>
                                                         <td>{{$testimon->initalDescr}}</td>
                                                     
                                                         <td>
-                                                            <a class="btn btn-primary btn-action mr-1" href = "{{route('testimon_edit', $testimon->id}}"><i class="fas fa-pencil-alt"></i></a>
-                                                          </td>
+                                                             <a class="btn btn-primary btn-action mr-1" href="{{ route('testimon_edit', $testimon->id) }}"><i class="fas fa-pencil-alt"></i></a>
+                                                         </td>
+
                                                     </tr>
                                                     @endforeach
                                                     
