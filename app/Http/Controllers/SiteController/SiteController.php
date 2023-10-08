@@ -20,14 +20,16 @@ class SiteController extends Controller
     public function index()
     {
 
-       $videos = Video::get();
-       $books = Book::get();
+       $videos = Video::orderBy('date','desc')->take(4)->get();
+       $books = Book::orderBy('date', 'desc')->take(6)->get();
        $testmon =Testimon::get();
+       $currentBook = Book::orderBy('date', 'desc')->take(6)->get();
 
         return view('sites.home', [
             'videos' => $videos,
             'books' => $books,
             'testmon' => $testmon,
+            'currentBook'=>$currentBook,
             
 
         ]);

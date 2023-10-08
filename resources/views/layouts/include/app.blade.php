@@ -112,127 +112,53 @@
               </div>
             </div>
             <div class="col-lg-6 py-5 py-xl-5 py-xxl-7">
-              <div class="carousel slide" id="carouselTestimonials" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 17500</span>
-                              <span class="text-900 fs--1 fw-normal">/Per book</span>
-                            </h3>
-                           
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 250000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="5000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 17500</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 25000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 175000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 25000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_5.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 175000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_4.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>TSH 250000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
-                  <div class="row">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next                                    </span></button>
-                  </div>
+          
+            <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @php $itemsPerSlide = 2; @endphp
+        @for ($i = 0; $i < count($currentBook); $i += $itemsPerSlide)
+            <div class="carousel-item {{ $i === 0 ? 'active' : '' }}" data-bs-interval="10000">
+                <div class="row">
+                    @for ($j = $i; $j < $i + $itemsPerSlide; $j++)
+                        @if (isset($currentBook[$j]))
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card card-span h-100 text-white">
+                                    <img class="img-fluid" src="{{ asset('public/images/'.$currentBook[$j]->Covermage) }}" alt="..." />
+                                    <div class="card-img-overlay ps-0">
+                                        <span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span>
+                                        <span class="badge bg-secondary p-2"></span>
+                                    </div>
+                                    <div class="card-body ps-0">
+                                        <h5 class="fw-bold text-1000 mb-4 text-truncate">{{ $currentBook[$j]->title }}</h5>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span class="text-900 me-3">Maku</span>
+                                            <span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                            <span class="text-900">{{ $currentBook[$j]->date }}</span>
+                                        </div>
+                                        <h3 class="mb-3 text-primary fw-bolder fs-4">
+                                            <span style ="font-size:15px">TSH {{ $currentBook[$j]->amount }}</span>
+                                            <span class="text-900 fs--1 fw-normal" style ="font-size:15px">/Per book</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endfor
                 </div>
-                <div class="row flex-center">
-                  <div class="col-auto position-relative z-index-2">
-                    <ol class="carousel-indicators me-xxl-7 me-xl-4 me-lg-7">
-                      <li class="active" data-bs-target="#carouselTestimonials" data-bs-slide-to="0"></li>
-                      <li data-bs-target="#carouselTestimonials" data-bs-slide-to="1"></li>
-                      <li data-bs-target="#carouselTestimonials" data-bs-slide-to="2"></li>
-                      <li data-bs-target="#carouselTestimonials" data-bs-slide-to="3"></li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
+            </div>
+        @endfor
+    </div>
+    <a class="carousel-control-prev" href="#bookCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#bookCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
             </div>
           </div>
         </div>
@@ -255,74 +181,44 @@
                     <h2 class="mb-3 text-primary fs-3 fs-md-6 text-center mt-5">Our Client Reviews</h2>
 
                 </div>
+                <div class="m-2">
+                <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga qui, amet tempora alias officia nobis ex in tempore minus, quasi magni doloremque!
+                   Eum, at qui praesentium iste placeat rem ab.</p>
+                </div>
+              
     
 
             </div>
             <div class="col-lg-7">
-              <div class="carousel slide" id="carouselActivity" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="row h-100">
-                      <div class="col-12"><img class="w-100" src="{{asset('landing/assets/img/gallery/activity.png')}}" width="383" alt="..." />
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Remove Previous and Next Controls -->
+    <div class="carousel-inner">
+        @foreach($testmon as $key => $item)
+            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}" data-bs-interval="10000">
+                <div class="row h-50">
+                    <div class="col-md-12">
+                        <img class="w-100" src="{{ asset('public/images/'.$item->Covermage) }}" width="383" alt="..." />
                         <div class="py-4">
-                          <h4 class="mb-2 text-1000">Participate in activities like vvvvcccc</h4>
-                          <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
-                          <p class="fw-normal mb-0 pe-lg-9">Bungee jumping, often known as bungy jumping, is a sport in which a person jumps from a considerable height while attached to a long elastic line. Usually, the pad is built on a high structure like a structure or a crane, a bridge across a steep ravine</p>
+                            <h4 class="mb-2 text-1000">Participate in activities like vvvvcccc</h4>
+                            <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
+                            <p class="fw-normal mb-0 pe-lg-9">{{ $item->initalDescr }}</p>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row h-100">
-                      <div class="col-12"><img class="w-100" src="{{asset('landing/assets/img/gallery/activity.png')}}" width="383" alt="..." />
-                        <div class="py-4">
-                          <h4 class="mb-2 text-1000">Participate in activities like</h4>
-                          <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
-                          <p class="fw-normal mb-0 pe-lg-9">Bungee jumping, often known as bungy jumping, is a sport in which a person jumps from a considerable height while attached to a long elastic line. Usually, the pad is built on a high structure like a structure or a crane, a bridge across a steep ravine</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="1000">
-                    <div class="row h-100">
-                      <div class="col-12"><img class="w-100" src="{{asset('landing/assets/img/gallery/activity.png')}}" width="383" alt="..." />
-                        <div class="py-4">
-                          <h4 class="mb-2 text-1000">Participate in activities like</h4>
-                          <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
-                          <p class="fw-normal mb-0 pe-lg-9">Bungee jumping, often known as bungy jumping, is a sport in which a person jumps from a considerable height while attached to a long elastic line. Usually, the pad is built on a high structure like a structure or a crane, a bridge across a steep ravine</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100">
-                      <div class="col-12"><img class="w-100" src="{{asset('landing/assets/img/gallery/activity.png')}}" width="383" alt="..." />
-                        <div class="py-4">
-                          <h4 class="mb-2 text-1000">Participate in activities like</h4>
-                          <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
-                          <p class="fw-normal mb-0 pe-lg-9">Bungee jumping, often known as bungy jumping, is a sport in which a person jumps from a considerable height while attached to a long elastic line. Usually, the pad is built on a high structure like a structure or a crane, a bridge across a steep ravine</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="row ps-sm-5 ps-md-0 align-items-end">
-                  <div class="col-4 col-sm-6 position-relative z-index-2">
-                    <ol class="carousel-indicators me-xxl-7 me-xl-4 me-lg-7">
-                      <li class="active" data-bs-target="#carouselShare" data-bs-slide-to="0"></li>
-                      <li data-bs-target="#carouselShare" data-bs-slide-to="1"></li>
-                      <li data-bs-target="#carouselShare" data-bs-slide-to="2"></li>
-                      <li data-bs-target="#carouselShare" data-bs-slide-to="3"></li>
-                    </ol>
-                  </div>
-                  <div class="col-8 col-sm-6 position-relative z-index-2 text-end"><a class="btn btn-lg text-secondary" href="#" role="button">Read More
-                      <svg class="bi bi-arrow-right ms-2" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                      </svg></a></div>
-                </div>
-              </div>
             </div>
-          </div>
+        @endforeach
+    </div>
+    <!-- Place Carousel Indicators (Dots) at the Bottom -->
+    <div class="text-center"> <!-- Center the carousel indicators horizontally -->
+    <ol class="carousel-indicators">
+        @foreach($testmon as $key => $item)
+            <li data-bs-target="#imageCarousel" data-bs-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : '' }}"></li>
+        @endforeach
+    </ol>
+</div>
+
+</div>
+
         </div>
         <!-- end of .container-->
 
@@ -339,145 +235,31 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="10000">
                     <div class="row h-100 align-items-center g-2">
+                      @foreach ($books as $book)
                       <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('public/images/'.$book->Covermage)}}" alt="..." />
+                          <div class="card-img-overlay ps-0">
+                            <span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span>
+                            <span class="badge bg-secondary p-2"></span>
+                          </div>
                           <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 175000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
+                            <h5 class="fw-bold text-1000 mb-4 text-truncate"><b>Title:</b>{{$book->title}}</h5>
+                            <div class="d-flex align-items-center justify-content-start">
+                              <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span>
+                              <span class="text-900 me-3">Makumbusho</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                              <span class="text-900"><small>Publish date:</small>{{$book->date}}</span>
+                            </div>
+                            <h3 class="mb-3 text-primary fw-bolder fs-4">
+                              <span>Tsh {{$book->amount}}/=</span>
+                              <span class="text-900 fs--1 fw-normal">/Per book</span>
+                            </h3>
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 25000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Fihalhohi Island Resort: Luxury destination without compromise</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 300oo</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
+                     @endforeach
                     </div>
                   </div>
-                  <div class="carousel-item" data-bs-interval="5000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 75000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 25000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Fihalhohi Island Resort: Luxury destination without compromise</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 30000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 17500</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_7.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 25000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_6.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Fihalhohi Island Resort: Luxury destination without compromise</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 30000</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_4.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Mermaid Beach Resort: The most joyful way to spend your holiday</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 17500</span><span class="text-900 fs--1 fw-normal">/Per book</span></h3>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_2.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Bora Bora: Enjoy a romantic cruise tour of at the sunny side of life</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 25000</span><span class="text-900 fs--1 fw-normal">/Per person</span></h3>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="{{asset('landing/assets/img/book_1.jpg')}}" alt="..." />
-                          <div class="card-img-overlay ps-0"><span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span><span class="badge bg-secondary p-2"></span></div>
-                          <div class="card-body ps-0">
-                            <h5 class="fw-bold text-1000 mb-4 text-truncate">Fihalhohi Island Resort: Luxury destination without compromise</h5>
-                            <div class="d-flex align-items-center justify-content-start"><span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Maldives</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">4 days</span></div>
-                            <h3 class="mb-3 text-primary fw-bolder fs-4"><span>Tsh 3000</span><span class="text-900 fs--1 fw-normal">/Per person</span></h3>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+               
                   <div class="row">
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next                                    </span></button>
@@ -504,86 +286,43 @@
             </div>
         <div class="container bg-offcanvas-gray-right">
           <div class="row g-2">
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-8">
               <div class="row g-2">
-                <div class="col-12">
-                      <div class="card card-span h-100 text-white position-relative">
-                        <img class="img-fluid h-100 w-100" src="{{ asset('landing/assets/img/book_6.jpg') }}" height="375" alt="..." />
-                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                          <div class="mt-auto px-4 mb-1">
-                            <h3 class="fs-1 fs-md-2 text-white">Munich</h3>
-                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
-                            <span class="text-light me-3">10 Packages</span>
-                          </div>
-                          <a class="stretched-link" href="#!"></a>
-                        </div>
-                        <!-- Add a play button overlay -->
-                        <div class="play-button bg-danger">
-                          <i class="fa fa-play-circle"></i>
-                        </div>
-                      </div>
-                </div>
+              
 
-                <div class="col-12">
+
+                @if(count($videos) > 0)
+                @foreach($videos as $video)
+                <div class="col-md-6">
                       <div class="card card-span h-100 text-white position-relative">
-                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_3.jpg')}}" height="375" alt="..." />
+                        <img class="img-fluid h-100 w-100" src="{{asset('public/images/'.$video->Covermage)}}" height="375" alt="..." />
                         <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
                           <div class="mt-auto px-4 mb-1">
-                            <h3 class="fs-1 fs-md-2 text-white">Work Hards</h3>
+                            <h3 class="fs-1 fs-md-2 text-white">{{$video->title}}</h3>
                             <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
-                            <span class="text-light me-3">10 Packages</span>
+                            <span class="text-light me-3"><span>Publication Date:</span>{{$video->date}}</span>
                           </div>
                           <a class="stretched-link" href="#!"></a>
                         </div>
                         <!-- Add a play button overlay -->
-                        <div class="play-button bg-danger">
-                          <i class="fa fa-play-circle"></i>
+                        <div class="play-button bg-danger"> 
+                          <a href="{{$video->link}}"> <i class="fa fa-play-circle"style="color:#fff"></i></a>
+                         
                         </div>
                       </div>
                 </div>
+                @endforeach
+                 @else
+                <div class="col-md-6 text-center">
+                    <p>Coming Soon</p>
+                </div>
+                @endif
+               
               </div>
             </div>
 
 
-            <div class="col-sm-6 col-lg-4">
-              <div class="row g-2">
-              <div class="col-12">
-                      <div class="card card-span h-100 text-white position-relative">
-                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_2.jpg')}}" height="375" alt="..." />
-                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                          <div class="mt-auto px-4 mb-1">
-                            <h3 class="fs-1 fs-md-2 text-white">Social</h3>
-                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
-                            <span class="text-light me-3">10 Packages</span>
-                          </div>
-                          <a class="stretched-link" href="#!"></a>
-                        </div>
-                        <!-- Add a play button overlay -->
-                        <div class="play-button bg-danger">
-                          <i class="fa fa-play-circle"></i>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-12">
-                      <div class="card card-span h-100 text-white position-relative">
-                      <img class="img-fluid h-100 w-100" src="{{asset('landing/assets/img/book_1.jpg')}}" height="375" alt="..." />
-                        <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                          <div class="mt-auto px-4 mb-1">
-                            <h3 class="fs-1 fs-md-2 text-white">Economy</h3>
-                            <span class="text-light fs--1 me-1"><i class="fas fa-gift"></i></span>
-                            <span class="text-light me-3">10 Packages</span>
-                          </div>
-                          <a class="stretched-link" href="#!"></a>
-                        </div>
-                        <!-- Add a play button overlay -->
-                        <div class="play-button bg-danger">
-                          <i class="fa fa-play-circle"></i>
-                        </div>
-                      </div>
-                </div>
-              </div>
-            </div>
+           
             <div class="col-sm-12 col-lg-4">
               <div class="bg-secondary-gradient h-100 d-flex align-items-center">
                 <div class="text-light p-4 p-sm-6 p-lg-0 px-xxl-6">
