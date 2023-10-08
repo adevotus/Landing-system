@@ -33,16 +33,16 @@
                 </a> --}}
 
                 <a href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"
-                    class="dropdown-item notify-item">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>{{ route('logout') }}</span>
+   onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+   class="dropdown-item notify-item">
+   <i class="fas fa-sign-out-alt"></i>
+   Logout
+</a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+   @csrf
+</form>
 
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
 
             </div>
         </li>

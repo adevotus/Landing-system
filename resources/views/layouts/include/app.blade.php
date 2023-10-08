@@ -62,7 +62,7 @@
                       </form>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <form class="row g-4 mt-5" action="#"  method = "post" enctype="multipart/form-data" >
+                      <form class="row g-4 mt-5" action="{{route('school')}}"  method = "post" enctype="multipart/form-data" >
                         @csrf
                         <div class="col-6">
                           <div class="input-group-icon">
@@ -115,39 +115,45 @@
           
             <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        @php $itemsPerSlide = 2; @endphp
-        @for ($i = 0; $i < count($currentBook); $i += $itemsPerSlide)
-            <div class="carousel-item {{ $i === 0 ? 'active' : '' }}" data-bs-interval="10000">
-                <div class="row">
-                    @for ($j = $i; $j < $i + $itemsPerSlide; $j++)
-                        @if (isset($currentBook[$j]))
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <div class="card card-span h-100 text-white">
-                                    <img class="img-fluid" src="{{ asset('public/images/'.$currentBook[$j]->Covermage) }}" alt="..." />
-                                    <div class="card-img-overlay ps-0">
-                                        <span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span>
-                                        <span class="badge bg-secondary p-2"></span>
+    @php $itemsPerSlide = 2; @endphp
+
+@if (count($currentBook) > 0)
+    @for ($i = 0; $i < count($currentBook); $i += $itemsPerSlide)
+        <div class="carousel-item {{ $i === 0 ? 'active' : '' }}" data-bs-interval="10000">
+            <div class="row">
+                @for ($j = $i; $j < $i + $itemsPerSlide; $j++)
+                    @if (isset($currentBook[$j]))
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="card card-span h-100 text-white">
+                                <img class="img-fluid" src="{{ asset('public/images/'.$currentBook[$j]->Covermage) }}" alt="..." />
+                                <div class="card-img-overlay ps-0">
+                                    <span class="badge bg-primary ms-3 me-1 p-2"><i class="fas fa-clock me-1"></i></span>
+                                    <span class="badge bg-secondary p-2"></span>
+                                </div>
+                                <div class="card-body ps-0">
+                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">{{ $currentBook[$j]->title }}</h5>
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span class="text-900 me-3">Maku</span>
+                                        <span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                        <span class="text-900">{{ $currentBook[$j]->date }}</span>
                                     </div>
-                                    <div class="card-body ps-0">
-                                        <h5 class="fw-bold text-1000 mb-4 text-truncate">{{ $currentBook[$j]->title }}</h5>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span>
-                                            <span class="text-900 me-3">Maku</span>
-                                            <span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
-                                            <span class="text-900">{{ $currentBook[$j]->date }}</span>
-                                        </div>
-                                        <h3 class="mb-3 text-primary fw-bolder fs-4">
-                                            <span style ="font-size:15px">TSH {{ $currentBook[$j]->amount }}</span>
-                                            <span class="text-900 fs--1 fw-normal" style ="font-size:15px">/Per book</span>
-                                        </h3>
-                                    </div>
+                                    <h3 class="mb-3 text-primary fw-bolder fs-4">
+                                        <span style="font-size:15px">TSH {{ $currentBook[$j]->amount }}</span>
+                                        <span class="text-900 fs--1 fw-normal" style="font-size:15px">/Per book</span>
+                                    </h3>
                                 </div>
                             </div>
-                        @endif
-                    @endfor
-                </div>
+                        </div>
+                    @endif
+                @endfor
             </div>
-        @endfor
+        </div>
+    @endfor
+@else
+    <p class="alert-info">No posts to display.</p>
+@endif
+
     </div>
     <a class="carousel-control-prev" href="#bookCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -191,33 +197,41 @@
             </div>
             <div class="col-lg-7">
             <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Remove Previous and Next Controls -->
     <div class="carousel-inner">
-        @foreach($testmon as $key => $item)
-            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}" data-bs-interval="10000">
-                <div class="row h-50">
-                    <div class="col-md-12">
-                        <img class="w-100" src="{{ asset('public/images/'.$item->Covermage) }}" width="383" alt="..." />
-                        <div class="py-4">
-                            <h4 class="mb-2 text-1000">Participate in activities like vvvvcccc</h4>
-                            <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
-                            <p class="fw-normal mb-0 pe-lg-9">{{ $item->initalDescr }}</p>
+        @if(count($testmon) > 0)
+            @foreach($testmon as $key => $item)
+                <div class="carousel-item {{ $key === 0 ? 'active' : '' }}" data-bs-interval="10000">
+                    <div class="row h-50">
+                        <div class="col-md-12">
+                            <img class="w-100" src="{{ asset('public/images/'.$item->Covermage) }}" width="383" alt="..." />
+                            <div class="py-4">
+                                <h4 class="mb-2 text-1000">Participate in activities like vvvvcccc</h4>
+                                <h2 class="mb-3 text-primary fs-3 fs-md-6">Bungee Jumping</h2>
+                                <p class="fw-normal mb-0 pe-lg-9">{{ $item->initalDescr }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            @endforeach
+        @else
+            <div class="carousel-item active">
+                <div class="row h-50">
+                    <div class="col-md-12">
+                        <p class="alert-info"> No posts available</p>
+                    </div>
+                </div>
             </div>
-        @endforeach
+        @endif
     </div>
-    <!-- Place Carousel Indicators (Dots) at the Bottom -->
-    <div class="text-center"> <!-- Center the carousel indicators horizontally -->
-    <ol class="carousel-indicators">
-        @foreach($testmon as $key => $item)
-            <li data-bs-target="#imageCarousel" data-bs-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : '' }}"></li>
-        @endforeach
-    </ol>
+    <div class="text-center">
+        <ol class="carousel-indicators">
+            @foreach($testmon as $key => $item)
+                <li data-bs-target="#imageCarousel" data-bs-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : '' }}"></li>
+            @endforeach
+        </ol>
+    </div>
 </div>
 
-</div>
 
         </div>
         <!-- end of .container-->
@@ -314,7 +328,7 @@
                 @endforeach
                  @else
                 <div class="col-md-6 text-center">
-                    <p>Coming Soon</p>
+                    <p class="text-info">Coming Soon</p>
                 </div>
                 @endif
                
